@@ -1,0 +1,1480 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Закупки - Закупки малого объёма</title>
+    <!-- Yandex.Metrika counter -->
+<script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script><script type="text/javascript">
+
+    var GAId = 'UA-86402878-1';
+    var YAId = 40525570;
+
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter = new Ya.Metrika({
+                    id: YAId,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript>&lt;div&gt;&lt;img src="https://mc.yandex.ru/watch/40525570" style="position:absolute; left:-9999px;" alt="" /&gt;&lt;/div&gt;</noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- Google.Analytics counter -->
+<script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] ||
+            function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', GAId, 'auto');
+    ga('send', 'pageview');
+</script>
+<!-- Google.Analytics counter -->
+
+    
+    <link href="/Content/css?v=MoowWNGItv-SNjtpv4gX7QOzRcYsyCldWneaEJ7geus1" rel="stylesheet" />
+
+    <link href="/Content/carouselCss?v=-6ywebWsTc7rSygcN2dR7HGu5NwiZCFhmbeJuaEom_s1" rel="stylesheet" />
+
+    <script type="text/template" id="wgtMessageBox">
+    &lt;div class="wgtMessageBox__wrapper"&gt;
+        &lt;div class="wgtMessageBox__title"&gt;&lt;/div&gt;
+        &lt;div class="wgtMessageBox__close" onclick="messageBox().hideMessage()"&gt;&lt;/div&gt;
+        &lt;div class="wgtMessageBox__content"&gt;
+            &lt;ul&gt;&lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</script>
+<script type="text/template" id="loadingPanel">
+    &lt;div class="widgetLoadingPanel"&gt;
+        &lt;div class="widgetLoadingPanel__overlay"&gt;&lt;/div&gt;
+        &lt;div class="widgetLoadingPanel__spinner"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+</script>
+
+<script type="text/template" id="wgtMessageBoxChoice">
+    &lt;div class="wgtMessageBoxChoice__wrapper"&gt;
+        &lt;div class="wgtMessageBoxChoice__content"&gt;&lt;/div&gt;
+        &lt;span class="btn-ok"&gt;Ок&lt;/span&gt;&lt;span class="" onclick="messageChoice().hideMessageChoice()"&gt;Отмена&lt;/span&gt;
+    &lt;/div&gt;
+</script>
+
+<script type="text/template" id="infoWindowTmplt">
+    &lt;div class="box-modal text-center" id="infoWindowTmplt"&gt;
+        &lt;div class="titleConfirm"&gt;&lt;%= info %&gt;&lt;/div&gt;
+        &lt;div class="btn-group"&gt;
+            &lt;a href="" class="approve btn btn-grey inline"&gt;Да&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</script>
+
+<script type="text/template" id="confirmModal">
+    &lt;div class="box-modal text-center" id="confirmModal"&gt;
+        &lt;div class="box-modal_close decline"&gt;&lt;span class="icon-cancel"&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="titleConfirm"&gt;&lt;%= title %&gt;&lt;/div&gt;
+        &lt;div class="btn-group"&gt;
+            &lt;a href="" class="approve btn btn-grey inline"&gt;Да&lt;/a&gt;&lt;div class="arcticmodal-close btn btn-grey inline"&gt;Нет&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</script>
+
+<script type="text/template" id="questionModal">
+    &lt;div class="box-modal" id="questionModal"&gt;
+        &lt;div class="box-modal_close decline"&gt;&lt;span class="icon-cancel"&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="titleConfirm text-left"&gt;&lt;%= title %&gt;&lt;/div&gt;
+        &lt;div class="btn-group  text-center"&gt;
+            &lt;div class="approve btn btn-grey inline"&gt;Да&lt;/div&gt;
+            &lt;div class="decline btn btn-grey inline"&gt;Нет&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</script>
+
+<script type="text/template" id="confirmModalWithComment">
+    &lt;div class="box-modal text-center" id="confirmModal"&gt;
+        &lt;div class="box-modal_close arcticmodal-close"&gt;&lt;span class="icon-cancel"&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="titleConfirm"&gt;&lt;%= title %&gt;&lt;/div&gt;
+        &lt;div class="auxTitleConfirm"&gt;&lt;%= auxtitle %&gt;&lt;/div&gt;
+        &lt;div class="btn-group"&gt;
+            &lt;a href="" class="approve btn btn-grey inline"&gt;Да&lt;/a&gt;&lt;div class="arcticmodal-close btn btn-grey inline"&gt;Нет&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</script>
+
+
+<script type="text/template" id="confirmWithReasonModal">
+    &lt;div class="box-modal text-center" id="confirmWithReasonModal"&gt;
+        &lt;div class="box-modal_close arcticmodal-close"&gt;&lt;span class="icon-cancel"&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="modalWithReasonTitle mainTitleConfirm"&gt;&lt;%= title %&gt;&lt;/div&gt;
+        &lt;div class="modalWithReasonTitle"&gt;&lt;span class="required auxiliaryTitleConfirm"&gt;&lt;%= auxiliaryTitle %&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;textarea class="confirmationReason"&gt;&lt;/textarea&gt;
+        &lt;div class="btn-group"&gt;
+            &lt;button class="savebtn btn btn-block"&gt;Сохранить&lt;/button&gt;
+            &lt;div class="arcticmodal-close btn btn-grey inline"&gt;Отменить&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</script>
+
+<script type="text/template" id="confirmDealCancelModal">
+    &lt;div class="box-modal text-center" id="confirmCancelModal"&gt;
+        &lt;div class="box-modal_close arcticmodal-close"&gt;&lt;span class="icon-cancel"&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;h1 class="titleConfirm"&gt;Вы действительно хотите «Отказаться от заключения»?&lt;/h1&gt;
+        &lt;div class="text-left"&gt;
+            &lt;h2&gt;При отмене контракта:&lt;/h2&gt;
+            &lt;ul&gt;
+                &lt;li&gt;1) закупка перейдёт в состояние "Заключение контрактов" &lt;/li&gt;
+                &lt;li&gt;2) текущий контракт перейдёт в состояние "Заказчик отказался от подписания"&lt;/li&gt;
+                &lt;li&gt;3) предложение перейдёт в статус "Контракт не заключен"&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class="modalWithReasonTitle"&gt;&lt;span class="required auxiliaryTitleConfirm"&gt;Причина отказа:&lt;/span&gt;&lt;/div&gt;
+        &lt;textarea class="confirmationReason" maxlength="4000"&gt;&lt;/textarea&gt;
+        &lt;div class="btn-group"&gt;
+            &lt;button class="yesBtn btn btn-block" disabled&gt;Да&lt;/button&gt;
+            &lt;div class="arcticmodal-close btn btn-grey inline"&gt;Нет&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</script>
+
+<script type="text/template" id="certificateWindowModal">
+    &lt;div class="box-modal text-center"&gt;
+        &lt;div class="modalwindow"&gt;
+            &lt;div class="box-modal_close arcticmodal-close"&gt;&lt;span class="icon-cancel"&gt;&lt;/span&gt;&lt;/div&gt;
+            &lt;h1 class="titleConfirm"&gt;Информация о сертификате&lt;/h1&gt;
+            &lt;div class="text-left"&gt;
+                &lt;h2&gt;Сертификат&lt;/h2&gt;
+                &lt;table class="info-table-modal"&gt;
+                    &lt;tr class="odd-row"&gt;
+                        &lt;td&gt;Дата выдачи сертификата&lt;/td&gt;
+                        &lt;td class="localize_datetime"&gt;&lt;%= NotBefore %&gt;&lt;/td&gt;
+                    &lt;tr&gt;
+                    &lt;tr class="even-row"&gt;
+                        &lt;td&gt;Срок действия сертификата&lt;/td&gt;
+                        &lt;td class="localize_datetime"&gt;&lt;%= NotAfter %&gt;&lt;/td&gt;
+                    &lt;tr&gt;
+                    &lt;tr class="odd-row"&gt;
+                        &lt;td&gt;Номер сертификата&lt;/td&gt;
+                        &lt;td&gt;&lt;a class="link-red" href="&lt;%= DownloadCertUrl %&gt;"&gt;&lt;%= CertNumber %&gt;&lt;/a&gt;&lt;/td&gt;
+                    &lt;tr&gt;
+                &lt;/table&gt;
+                &lt;h2&gt;Подписавший&lt;/h2&gt;
+                &lt;table class="info-table-modal"&gt;
+                    &lt;tr class="odd-row"&gt;
+                        &lt;td&gt;Имя&lt;/td&gt;
+                        &lt;td&gt;&lt;%= Name %&gt;&lt;/td&gt;
+                    &lt;tr&gt;
+                    &lt;tr class="even-row"&gt;
+                        &lt;td&gt;Фамилия&lt;/td&gt;
+                        &lt;td&gt;&lt;%= Surname %&gt;&lt;/td&gt;
+                    &lt;tr&gt;
+                    &lt;tr class="odd-row"&gt;
+                        &lt;td&gt;Организация&lt;/td&gt;
+                        &lt;td&gt;&lt;%= Organization %&gt;&lt;/td&gt;
+                    &lt;tr&gt;
+                    &lt;tr class="even-row"&gt;
+                        &lt;td&gt;Роль&lt;/td&gt;
+                        &lt;td&gt;&lt;%= Role %&gt;&lt;/td&gt;
+                    &lt;tr&gt;
+                    &lt;tr class="odd-row"&gt;
+                        &lt;td&gt;Email&lt;/td&gt;
+                        &lt;td&gt;&lt;%= Email %&gt;&lt;/td&gt;
+                    &lt;tr&gt;
+                    &lt;tr class="even-row"&gt;
+                        &lt;td&gt;Департамент&lt;/td&gt;
+                        &lt;td&gt;&lt;%= Departament %&gt;&lt;/td&gt;
+                    &lt;tr&gt;
+                    &lt;tr class="odd-row"&gt;
+                        &lt;td&gt;Местоположение&lt;/td&gt;
+                        &lt;td&gt;&lt;%= Location %&gt;&lt;/td&gt;
+                    &lt;tr&gt;
+                    &lt;tr class="even-row" &gt;
+                        &lt;td&gt;ИНН&lt;/td&gt;
+                        &lt;td&gt;&lt;%= Inn %&gt;&lt;/td&gt;
+                    &lt;tr&gt;
+                    &lt;tr class="odd-row"&gt;
+                        &lt;td&gt;КПП&lt;/td&gt;
+                        &lt;td&gt;&lt;%= Kpp %&gt;&lt;/td&gt;
+                    &lt;tr&gt;
+                    &lt;tr class="even-row"&gt;
+                        &lt;td&gt;ОГРН&lt;/td&gt;
+                        &lt;td&gt;&lt;%= Ogrn %&gt;&lt;/td&gt;
+                    &lt;tr&gt;
+                &lt;/table&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="btn-group"&gt;
+            &lt;button class="btn btn-grey arcticmodal-close"&gt;Закрыть&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</script>
+
+<script type="text/template" id="confirmLegalPersonPrefillingInfo">
+    &lt;div class="box-modal text-center"&gt;
+        &lt;div class="modalwindow"&gt;
+            &lt;div class="box-modal_close arcticmodal-close"&gt;&lt;span class="icon-cancel"&gt;&lt;/span&gt;&lt;/div&gt;
+            &lt;h1 class="titleConfirm"&gt;Вы хотите предзаполнить информацию об организации?&lt;/h1&gt;
+            &lt;table class="info-table-modal" style="text-align: left;"&gt;
+                &lt;tr class="odd-row"&gt;
+                    &lt;td&gt;Полное наименование&lt;/td&gt;
+                    &lt;td&gt;&lt;%= FullName %&gt;&lt;/td&gt;
+                &lt;tr&gt;
+                &lt;tr class="even-row"&gt;
+                    &lt;td&gt;Краткое наименование&lt;/td&gt;
+                    &lt;td&gt;&lt;%= ShortName %&gt;&lt;/td&gt;
+                &lt;tr&gt;
+                &lt;tr class="odd-row"&gt;
+                    &lt;td&gt;ИНН&lt;/td&gt;
+                    &lt;td&gt;&lt;%= Inn %&gt;&lt;/td&gt;
+                &lt;tr&gt;
+                &lt;tr class="even-row"&gt;
+                    &lt;td&gt;КПП&lt;/td&gt;
+                    &lt;td&gt;&lt;%= Kpp %&gt;&lt;/td&gt;
+                &lt;tr&gt;
+                &lt;tr class="odd-row"&gt;
+                    &lt;td&gt;ОГРН&lt;/td&gt;
+                    &lt;td&gt;&lt;%= Ogrn %&gt;&lt;/td&gt;
+                &lt;tr&gt;
+                &lt;tr class="even-row"&gt;
+                    &lt;td&gt;Адрес места нахождения&lt;/td&gt;
+                    &lt;td&gt;&lt;%= Address %&gt;&lt;/td&gt;
+                &lt;tr&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+        &lt;div class="btn-group"&gt;
+            &lt;div class="approve btn btn-grey inline"&gt;Да&lt;/div&gt;
+            &lt;div id="CloseModalBtn" class="arcticmodal-close btn btn-grey inline"&gt;Нет&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</script>
+
+<script type="text/template" id="confirmLegalPersonPrefillingInfoForCommercial">
+    &lt;div class="box-modal text-center"&gt;
+        &lt;div class="modalwindow"&gt;
+            &lt;div class="box-modal_close arcticmodal-close"&gt;&lt;span class="icon-cancel"&gt;&lt;/span&gt;&lt;/div&gt;
+            &lt;h1 class="titleConfirm"&gt;Вы хотите предзаполнить информацию об организации?&lt;/h1&gt;
+            &lt;table class="info-table-modal" style="text-align: left;"&gt;
+                &lt;tr class="odd-row"&gt;
+                    &lt;td&gt;Полное наименование&lt;/td&gt;
+                    &lt;td&gt;&lt;%= FullName %&gt;&lt;/td&gt;
+                &lt;tr&gt;
+                &lt;tr class="even-row"&gt;
+                    &lt;td&gt;ИНН&lt;/td&gt;
+                    &lt;td&gt;&lt;%= Inn %&gt;&lt;/td&gt;
+                &lt;tr&gt;
+                &lt;tr class="odd-row"&gt;
+                    &lt;td&gt;КПП&lt;/td&gt;
+                    &lt;td&gt;&lt;%= Kpp %&gt;&lt;/td&gt;
+                &lt;tr&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+        &lt;div class="btn-group"&gt;
+            &lt;div class="approve btn btn-grey inline"&gt;Да&lt;/div&gt;
+            &lt;div id="CloseModalBtn" class="arcticmodal-close btn btn-grey inline"&gt;Нет&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</script>
+
+<script type="text/template" id="individualEntrepreneurPrefillingInfo">
+    &lt;div class="box-modal text-center"&gt;
+        &lt;div class="modalwindow"&gt;
+            &lt;div class="box-modal_close arcticmodal-close"&gt;&lt;span class="icon-cancel"&gt;&lt;/span&gt;&lt;/div&gt;
+            &lt;h1 class="titleConfirm"&gt;Вы хотите предзаполнить информацию об организации?&lt;/h1&gt;
+            &lt;table class="info-table-modal" style="text-align: left;"&gt;
+                &lt;tr class="odd-row"&gt;
+                    &lt;td&gt;ИНН&lt;/td&gt;
+                    &lt;td&gt;&lt;%= Inn %&gt;&lt;/td&gt;
+                &lt;tr&gt;
+                &lt;tr class="even-row"&gt;
+                    &lt;td&gt;ОГРНИП&lt;/td&gt;
+                    &lt;td&gt;&lt;%= Ogrn %&gt;&lt;/td&gt;
+                &lt;tr&gt;
+                &lt;tr class="odd-row"&gt;
+                    &lt;td&gt;Адрес места нахождения&lt;/td&gt;
+                    &lt;td&gt;&lt;%= Address %&gt;&lt;/td&gt;
+                &lt;tr&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+        &lt;div class="btn-group"&gt;
+            &lt;div class="approve btn btn-grey inline"&gt;Да&lt;/div&gt;
+            &lt;div id="CloseModalBtn" class="arcticmodal-close btn btn-grey inline"&gt;Нет&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</script>
+
+<script type="text/template" id="userAddToOrgMessageBox">
+    &lt;div class="box-modal text-center" id="confirmModal"&gt;
+        &lt;div class="box-modal_close decline"&gt;&lt;span class="icon-cancel"&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="titleConfirm"&gt;
+            Организация «&lt;%= OrgName %&gt;» ИНН &lt;%= Inn %&gt; КПП &lt;%= Kpp %&gt;, уже зарегестрирована в системе.
+            ваша заявка на добавление пользователя будет направлена администратору организации
+            «&lt;%= AdminFulName %&gt;». Если вы впервые регистрируете организацию в системе,
+            то просим вас обратится в службу технической поддержки для выяснения обстоятельств &lt;%= techTupport %&gt;
+        &lt;/div&gt;
+        &lt;div class="btn-group"&gt;
+            &lt;a href="" class="approve btn btn-grey inline"&gt;Направить заявку администрации&lt;/a&gt;
+            &lt;a class="decline btn btn-grey inline"&gt;Отмена&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</script>
+    <script src="/bundles/scripts?v=maTqeKR0AHDYG1MU85eGsS9t_A7VYqHbEoLS1-hg4Xo1"></script>
+
+    <script src="/bundles/scriptsformainlayout?v=rNcd0n0nx2X0BkFXdRtKY-ClrSfuTYnmOWVvongHKKo1"></script>
+
+    <script src="/bundles/carouselJs?v=P2bsXutYfSJNSwwgDmz2oA-cIaRQ28h_PSYn3Np_28M1"></script>
+
+    
+    <style type="text/css"></style>
+        <link rel="SHORTCUT ICON" href="/Layout/GetFavicon?guid=adf91dd0-29e8-4b6a-85be-d4133a0eb322" />
+    
+
+
+
+<script type="text/javascript">
+
+    $.ajaxPrefilter(function (options) {
+        if (options.url.indexOf('https://suggestions.dadata.ru/') === 0) {
+            return;
+        }
+
+        if (!options.beforeSend) {
+            options.beforeSend = function (xhr) {
+                var tenantId = 2;
+                if (tenantId != null) {
+                    xhr.setRequestHeader('XXX-TenantId-Header', tenantId);
+                }
+            }
+        }
+    });
+
+
+    ajaxHelpers.init('/Account/SignOut');
+    koVMs = {};
+    datepickerOptions = {};
+
+    //глобальный объект, хранящий ресурсы
+    window.resourceObject = {
+        // роли
+        roles: {
+            administrator: 'Administrator',
+            participant: 'Participant',
+            customer: 'Customer'
+        },
+        appStates: {
+            draft: 'Формирование',
+            actual: 'Действительно'
+        },
+        appMeetsStates: {
+            notDefined: 'Не определено',
+            meet: 'Соответствует',
+            doesNotMeet: 'Не соответствует',
+            notDefinedId: 5,
+            meetId: 10,
+            doesNotMeetId: 15
+            },
+        vatRateStates: {
+            VatRateNotSubject: '10',
+            VatRateNotDefined: '0',
+            VatRateSubject: '5'
+        },
+        dealObjects: {
+            '1': 'по Закупке',
+            '2': 'по Заказу'
+        },
+        //значения перечислений
+        enumValues:
+        {
+            draftTradeStateName: 'Формирование',
+            publishingStateName: 'Публикуется',
+            fillingApplicationsStateName: 'Прием предложений',
+            IdVatRateNotDefined: '0',
+            IdVatRateSubject: '5',
+            IdVatRateNotSubject: '10',
+            IdExcludingVatRate: '15',
+            IdTrdateStateFillingApplication: '15',
+            IdTrdateStateAgreementConditions: '20',
+            IdTrdateStateDealSigning: '40',
+            createdByCustomerStateName: 'Сформировано заказчиком',
+            applicationActualStateName: 'Утверждено оператором',
+            orderDraftState: 'Черновик'
+        },
+
+        organizationTypes: {
+            JudicialPerson: 'JudicialPerson',
+            JudicialPersonId: '1',
+            IndividualEntrepreneur: 'IndividualEntrepreneur',
+            IndividualEntrepreneurId: '2',
+            PhysicalPerson: 'PhysicalPerson',
+            PhysicalPersonId: '3'
+        },
+
+        localization: {
+            dealSignedOutsideEShop: 'Контракт заключён вне электронного магазина',
+            yesBoolProperty: 'Да',
+            noBoolProperty: 'Нет'
+        },
+
+        //адреса
+        urls: {
+            WebApiUri: 'https://223-zmo-trunk-api.rts-tender.ru',
+            urlGetTradeForAdministrator: 'https://223-zmo-trunk-api.rts-tender.ru/api/Administrator/GetTrade',
+            urlUpdateTradeForAdministrator: 'https://223-zmo-trunk-api.rts-tender.ru/api/Administrator/UpdateTradeFillingApplicationEndDate',
+            editPublishedTradeActionUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Trade/EditPublishedTrade',
+            editPublishedTradeDateActionUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Trade/EditPublishedTradeDates',
+            saveAsDraftTradeUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Trade/SaveAsDraft',
+            publishTradeUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Trade/Publish',
+            tradeIndexRedirectUrl: '/',
+            customerContactInfoUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/trade/GetCustomerContactInfo',
+            currentUserInfoUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/account/manageinfo',
+            saveUserInfoUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/account/saveuserinfo',
+            signDealOutsideUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Deal/SignDealOutsideEShop',
+            sendForApproveUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Deal/SentForParticipantApprove',
+            sentForSignByParticipantUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Deal/SentForSignByParticipant',
+            changeFormToPaperUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Deal/ChangeFormToPaper',
+            dealExecutedUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Deal/Executed',
+            dealTerminatedUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Deal/Terminated',
+            getAllParticipantsUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/participants',
+            cancelDealUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Deal/CancelDeal',
+            uiViewUserInfoUrl: '/Account/GetManageUserInfo',
+            uiRenewUserClaims: '/Account/RefreshCookies',
+            sendConfirmationEmailUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/account/SendConfirmationEmail',
+            getClassificatorElementWithoutChildsByCode: 'https://223-zmo-trunk-api.rts-tender.ru/api/Dictionary/GetElementWithoutChildsByCode',
+            getTreeElements: 'https://223-zmo-trunk-api.rts-tender.ru/api/Dictionary',
+            searchByName: 'https://223-zmo-trunk-api.rts-tender.ru/api/Dictionary/GetAllByName',
+            searchByCode: 'https://223-zmo-trunk-api.rts-tender.ru/api/Dictionary/GetAllByCode',
+            getAllChildren: 'https://223-zmo-trunk-api.rts-tender.ru/api/Dictionary/GetAllByParentCodeRecursive',
+            getAllByListOfParentCodes: 'https://223-zmo-trunk-api.rts-tender.ru/api/Dictionary/GetAllByListOfParentCodes',
+            getAllNotificationsUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Notification/GetNotifications',
+            removeNotificationsUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Notification/RemoveNotifications',
+            removeNotificationUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Notification/RemoveNotification',
+            applicationGridUrl: '/Application',
+            applicationMeetRequirementsUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Applications/applicationId/ApplicationMeetRequirements',
+            applicationDoesntMeetRequirementsUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Applications/applicationId/ApplicationDoesNotMeetRequirements',
+            markAsReadUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Notification/MarkNotificationsAsRead',
+            markAsUnReadUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Notification/MarkNotificationsAsUnread',
+            webApiUrlUpdateInterests: 'https://223-zmo-trunk-api.rts-tender.ru/api/organization/updateinterests',
+            dealGridUrl: '/Deal',
+            approveCustomerDealUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Deal/ApproveCustomerDeal',
+            rejectCustomerDealUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Deal/RejectCustomerDeal',
+            concludeApprovedDealUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Deal/ConcludeApprovedDeal',
+            webUIViewParticipantInfoUrl:
+                '/Participant/ViewParticipantInfo?participantId=identifier',
+            webUIViewCustomerInfoUrl: '/Customer/ViewCustomerInfo?customerId=identifier',
+            urlCheckOrganizationInteresClassifcators: 'https://223-zmo-trunk-api.rts-tender.ru/api/organization/CheckOrganizationInteresClassifcators',
+            urlClearOrganizationInteres: 'https://223-zmo-trunk-api.rts-tender.ru/api/organization/ClearInterests',
+            removeTradeDraft: 'https://223-zmo-trunk-api.rts-tender.ru/api/Trade',
+            closeWithoutDealsUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Trade/tradeId/CloseWithoutDeals',
+            suggestPaperFormSigningUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Deal/SuggestPaperFormSigning',
+            suggestElectronicFormSigningUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Deal/SuggestElectronicFormSigning',
+
+            participantOfferGridUrl: '/ParticipantOffer',
+            participantCommercialOfferGridUrl: '/ParticipantOffer/Commercial',
+
+            getStarDrugsOfferUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/DrugsParticipantOffer/GetStarDrugsOffer',
+            getAllParticipantOfferUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/participantoffer/getoffers',
+
+            getPriceLists: 'https://223-zmo-trunk-api.rts-tender.ru/api/participantoffer/pricelists',
+
+            participantOfferPublishUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/participantoffer/Publish',
+            webApiStarDrugsOfferSaveDraftUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/DrugsParticipantOffer/SaveDraftStarDrugsOffer',
+            participantOfferSaveAsDraftUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/participantoffer/SaveAsDraft',
+            validateAndGenerateCommercialPrintForm: 'https://223-zmo-trunk-api.rts-tender.ru/api/participantoffer/ValidateAndGenerateCommercialPrintForm',
+            webApiRemoveParticipantOffersUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/participantoffer/remove',
+            viewParticipantOfferInfoUrl: '/ParticipantOffer/ViewOffer?id=identifier',
+            viewCommercialOfferInfoUrl: '/ParticipantOffer/ViewCommercial?id=identifier',
+            webApiOkServiceUrl: 'https://223-zmo-trunk-api.rts-tender.ru/market/api/v1/okservice/brieflistbyinns',
+            webApiOkServiceUrlByIds: 'https://223-zmo-trunk-api.rts-tender.ru/market/api/v1/okservice/brieflist',
+            webApiDeactivateParticipantOffersUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/participantoffer/DeactivateOffers',
+            WebApiCheckOffersForOrderCreationUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/participantoffer/CheckOffersForOrderCreation',
+            WebApiGetParticipantOffersInfoUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/participantoffer/GetOffersInfo',
+            revokeApplicationUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Applications/applicationId/Revoke',
+            removeApplicationDraft: 'https://223-zmo-trunk-api.rts-tender.ru/api/Trade/tradeId/Application/applicationId',
+            editPublishedApplicationActionUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Application/EditPublished',
+            createApplicationsActionUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Trade/tradeId/CreateApplicationsByCustomer',
+            editApplicationUIrl: '/Application/Edit' +
+                "?lotId=idOfLot&amp;applicationId=idOfApplication",
+
+            webApiGetAllUsersForOrganizationUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/account/GetAllUsersForOrganization',
+            webApiMakeUsersNotOrgAdminForOrganizationUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/account/MakeUsersNotOrgAdminForOrganization',
+            webApiMakeUsersOrgAdminForOrganizationUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/account/MakeUsersOrgAdminForOrganization',
+            webApiBlockUsersForOrganizationUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/account/BlockUsersForOrganization',
+            webApiUnBlockUsersForOrganizationUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/account/UnBlockUsersForOrganization',
+            WebApiFinishReviewApplicationUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Trade/FinishReviewApplication',
+            editTradeUrl: '/Trade/Edit' + "?Id=idOfTrade",
+            copyTradeUrl: '/Trade/Copy',
+            editTradeDatesUrl: '/Trade/EditDates' + "?Id=idOfTrade",
+            revokeTradeUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Trade/tradeId/RevokeTrade',
+            webApiUpdateOrganizationSettings: 'https://223-zmo-trunk-api.rts-tender.ru/api/organization/updateSettings',
+            webApiGetTimeZonesList: 'https://223-zmo-trunk-api.rts-tender.ru/api/common/gettimezonelist',
+            webUIGetManageInfo: '/Account/GetManageUserInfo',
+            administratorGetWhiteEmails: 'https://223-zmo-trunk-api.rts-tender.ru/api/Administrator/UpdateWhiteEmails',
+            webApiAddCodeToOrgInterestsUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/organization/addcodetoorganizationinterests',
+            certificateListPage: '/Account/CertificateList',
+            getDataToSignByParticipantForDealUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Deal/GetDataToSignByParticipantForDeal',
+            getDataToSignByCustomerForDealUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Deal/GetDataToSignByCustomerForDeal',
+            getDataForDealDocumentSignedByCustomer: 'https://223-zmo-trunk-api.rts-tender.ru/api/Deal/GetDataForDealDocumentSignedByCustomer',
+            getDataForDealDocumentSignedByParticipant: 'https://223-zmo-trunk-api.rts-tender.ru/api/Deal/GetDataForDealDocumentSignedByParticipant',
+            tradesToExcelUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Trade/ExportToExcel',
+            dealsToExcelUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Deal/ExportToExcel',
+            customersToExcelUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Customers/ExportToExcel',
+            orderIndexRedirectUrl: '/Order',
+            webApiSaveAsDraftOrderUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Order/SaveAsDraft',
+            webApiSendOrderToParticipantUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Order/SendToParticipant',
+            editOrderurl: '/Order/Edit' + '?id=idOfOrder',
+            webApiCancelOrderUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Order/idOfOrder/CancelOrder',
+            WebApiApproveOrderByParticipantUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Order/ApproveByParticipant',
+            WebApiRejectOrderByParticipantUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Order/RejectByParticipant',
+            webUiViewDealByTrade: '/Deal/ViewDealByTrade',
+            webUiViewDealById: '/Deal/ViewDeal' + '?id=idOfDeal&amp;dealObject=objectOfDeal',
+
+            suggestionsServiceUrl: 'https://suggestions.dadata.ru/suggestions/api/4_1/rs',
+            suggestionsToken: '9b670c4aba429375079bcc7b0c43cf92b5f7219a',
+            editDealChangingFormToPaperUrl: '/Deal/ChangeDealForm' + "?dealId=idOfDeal",
+            getAllOrganizationsUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Organizations',
+            webApiSaveParentOrganizationInfoUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Organization/SaveOrganizationInfo',
+            organizationSettingsUiUrl: '/Organization/OrganizationSettingsView',
+            webApiGetShortParticipantInfo: 'https://223-zmo-trunk-api.rts-tender.ru/api/participants/participantshortinfo',
+            webApiGetRegionsList: 'https://223-zmo-trunk-api.rts-tender.ru/api/Region',
+            webApiGetRegionsKladrList: 'https://223-zmo-trunk-api.rts-tender.ru/api/kladrregion',
+            webApiGetNewNotificationsCountUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Notification/GetNewNotificationsCount',
+            webApiSentToParticipantOrderCountUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Order/GetSentToParticipantCount',
+            webApiGetBudgets: 'https://223-zmo-trunk-api.rts-tender.ru/api/belgorodbudgets',
+            WebApiGetTradeMetrics: 'https://223-zmo-trunk-api.rts-tender.ru/api/Metric/GetTrades',
+            WebApiAddDownloadMetric: 'https://223-zmo-trunk-api.rts-tender.ru/api/Metric/AddDownloadMetric',
+            WebApiGetMetricDetails: 'https://223-zmo-trunk-api.rts-tender.ru/api/Metric/GetMetricDetails',
+
+            ExternalDealGridUrl: '/ExternalDeal',
+            WebApiPublishExternalDealUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/externaldeal/createexternaldeal',
+            WebApiGetExternalDealsUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/externaldeal/getexternaldeals',
+            WebApiDeleteExternalDealUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/externaldeal/delete',
+            WebApiExternalDealDeleteDocumentUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/ExternalDeal/DeleteDocument',
+            WebApiExternalDealUploadDocumentsUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/ExternalDeal/UploadDocuments',
+
+            WebApiGetSubscriptionsUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Tariff/GetSubscriptions',
+            WebApiGetOrganizationAccountsUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Application/GetOrganizationAccounts',
+            WebApiGetCommissionInformationForLotUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Trade/GetCommissionInformationForLot',
+            WebApiIsTradeApplicationFromPPUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Trade/IsTradeApplicationFromPP',
+            WebApiGetLicenseAgreementForTariffUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Tariff/GetLicenseAgreementForTariff',
+            WebApiGetAutoProlongationForTariffUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Tariff/GetAutoProlongationForTariff',
+            WebApiGetCancelationAutoProlongationForTariffUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Tariff/GetCancelationAutoProlongationForTariff',
+            WebApiBuyTariffUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Tariff/BuyTariff',
+            WebApiSetAutoProlongationForSubscriptionUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Tariff/SetAutoProlongationForSubscription',
+            WebUiSubscriptionView: '/Tariff/SubscriptionView' + "?id=idOfSubscription",
+
+            WebApiGetInfoForSignUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/FileSign/GetInfoForSign',
+            WebApiGetInfosForSignUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/FileSign/GetInfosForSign',
+            WebApiSignFileUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/FileSign/SignFile',
+
+            WebApiCheckCurrentUserEdsUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Organization/CheckCurrentUserEds',
+            WebApiCheckAuthorizationPaymentUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Organization/CheckAuthorizationPayment',
+            WebApiCheckOrgHasEtpAgreementUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Organization/CheckOrgHasEtpAgreement',
+            WebApiGenerateDeclarationOfAccessionUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Organization/GenerateDeclarationOfAccession',
+            WebApiGetDeclarationOfAccessionForSignUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/organization/GetDeclarationOfAccessionForSign',
+            WebApiSignAndAgreeDeclarationOfAccessionUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/organization/SignAndAgreeDeclarationOfAccession',
+
+            WebApiTradeExportToExcelByFilterUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Trade/ExportToExcelByFilter',
+            WebApiDealExportToExcelByFilterUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Deal/ExportToExcelByFilter',
+            WebApiExternalDealExportToExcelByFilterUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/ExternalDeal/ExportToExcelByFilter',
+            WebApiParticipantOfferExportToExcelByFilterUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/ParticipantOffer/ExportToExcelByFilter',
+            WebApiOrderDealExportToExcelByFilterUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Order/ExportToExcelByFilter',
+            WebApiFeedbackRatingExportToExcelByFilterUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/ParticipantRating/ExportFeedbackToExcelByFilter',
+
+            WebApiGenerateFksAgreementUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Common/GenerateFksAgreement',
+            WebApiGetLicenseRewardUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Tariff/GetLicenseReward',
+
+            webUIViewParticipantRatingInfoUrl:
+                '/Participant/ViewParticipantRatingInfo?orgId=identifier',
+            webUILeaveParticipantRatingInfoUrl:
+                '/Participant/LeaveParticipantRatingInfo?orgId=identifier',
+            WebApiGetParticipantRatingDetailsToLeaveFeedback: 'https://223-zmo-trunk-api.rts-tender.ru/api/ParticipantRating/GetParticipantRatingDetailsToLeaveFeedback' + '/identifier',
+            WebApiSaveCustomerFeedbackForParticipantUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/ParticipantRating/SaveCustomerFeedbackForParticipant',
+            WebApiGetParticipantRatingDetailsUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/ParticipantRating/GetParticipantRatingDetails' + '/identifier',
+
+            WebApiGetBannerUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/Common/GetBanner',
+
+            WebApiMaxFileSizeForUploadUrl : 'https://223-zmo-trunk-api.rts-tender.ru/api/Common/GetMaximumFileSizeForUpload',
+
+            WebApiDeleteCustomerFeedbackForParticipantUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/ParticipantRating/DeleteCustomerFeedbackForParticipant',
+            WebApiHideCustomerFeedbackForParticipantUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/ParticipantRating/HideCustomerFeedbackForParticipant',
+            WebApiShowCustomerFeedbackForParticipantUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/ParticipantRating/ShowCustomerFeedbackForParticipant',
+
+            WebApiCommercialSearchUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/participantoffer/commercial',
+
+            WebApiRemoveOrderDraft: 'https://223-zmo-trunk-api.rts-tender.ru/api/order',
+
+            webApiGetOrganizationForInviteUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/invitation',
+
+            webUiRedirectToMarketUrl: '/MarketRedirect/RedirectToMarket?actionName=action_param',
+            webApiGetSignedOutOfEpReasonsUrl: 'https://223-zmo-trunk-api.rts-tender.ru/api/signedOutOfEpReasons' + '/GetSignedOutOfEpReasons?tenantId=' + 2
+        },
+
+        consts:
+            {
+                maxDisplayedCellContentLength: 60,
+                threeDots: " ...",
+                decimalRegExp: /^(\d+((\.|\,)?\d{0,2}|(\.|\,)\d{0,2}))$/g,
+                decimalRegExp4: /^(\d+((\.|\,)?\d{0,2}|(\.|\,)\d{0,4}))$/g,
+                intRegExp: /^\d+$/g,
+                emailRegExp: /^([a-zA-Z0-9\-\._]*\@?[a-zA-Z0-9\-_]*\.?[a-zA-Z0-9\-_]*)$/g
+            }
+    };
+    var cryptoProBrowserPluginProviderAsyncUrl = '/Scripts/CryptoProBrowserPluginProviderAsync?v=v4oPt_aebj4CVMJK5GCWxGwAO0no3UnxmYTYcLWulRA1\
+';
+    var cryptoProBrowserPluginProviderSyncUrl = '/Scripts/CryptoProBrowserPluginProviderSync?v=ZbttAfFkTmZn7M_sDT0WSihVimW9i0R2w__XsCs1HsQ1\
+';
+
+
+    $(document).ready(function() {
+            
+            loadBanner({
+                TenantId: 2,
+                BannerPlace: 'UnderHeader',
+            });
+            
+    });
+
+</script>
+
+
+    <!--[if lt IE 9]>
+        <script src="/Scripts/html5?v=1UyW6sMn8GKhfG42oTGCw84ivFNre0kDxPEdW2WOAik1"></script>
+
+    <![endif]-->
+</head>
+<body style="">
+    <div id="main-wrapper">
+        
+<!-- Header Block -->
+<div class="header">
+    <div class="header-items">
+        <div class="header-item__logo">
+            <a href="/">
+                <img src="data:image/png;base64, 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" />
+            </a>
+        </div>
+        <div class="header-item__tagline">ЗМО-223 Первый!<br /><div style="color:#0202AA; font-size:14px">Текст-по-мельче</div></div>
+
+
+
+
+        <div class="header-item__auth-block">
+            <div class="header-item__auth-block__date">
+                <span id="currentTime" class="text-red">19 01 МСК</span>
+                <span id="currentDate">Пятница 20.12.2019 г.</span>
+            </div>
+            <div class="header-item__auth-block__logout">
+                <a href="/Account/SignIn?returnUrl=%2F" id="loginLink">Вход</a>
+            </div>
+        </div>
+    </div>
+<div id="main-menu" class="header-nav" style="width: 100%;">
+    <ul>
+            <li><a href="/">Закупки</a></li>
+        <li><a href="/ParticipantOffer">Предложения поставщиков</a></li>
+        
+            </ul>
+</div>    <!-- End: Header Block -->
+
+    <div class="header-breadcrumbs">
+        
+    Главная
+
+    </div>
+
+    <div id="UnderHeaderBannerWrapper" class="hidden" style="display: block;">
+    <div id="UnderHeaderBannerCss">
+
+    <style>#secondBanner.second-banner-wrapper {
+    position: relative;
+    margin-right: 0;
+    height: 115px;
+    padding: 15px 40px;
+    margin-bottom: 60px;
+    color: #fff;
+    border: 1px solid #fff30c;
+    background: url("https://www.rts-tender.ru/Portals/0/Images/background-small-banner.jpg") 0 center no-repeat;
+    box-sizing: border-box;
+}
+#secondBanner .second-banner::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+#secondBanner .second-banner__solution {
+    float: left;
+    margin-right: 16%;
+    margin-top: 12px;
+}
+#secondBanner .second-banner__solution h1 {
+    margin-bottom: 5px;
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 4px 3px 2px rgba(100,0,10,1);
+}
+#secondBanner .second-banner__solution p {
+    font-size: 18px;
+    font-family: Arial;
+}
+#secondBanner .second-banner__btn {
+    float: left;
+    margin-top: 20px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background-color: #e44b5d;
+}
+#secondBanner .second-banner__btn a {
+    display: inline-block;
+    padding: 8px 30px;
+    font-size: 16px;
+    font-family: Arial;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    color: #fff;
+}
+#secondBanner .second-banner__btn:hover {
+    background-color: #d33a4c;
+}
+#secondBanner .second-banner__list {
+    float: right;
+    margin-top: 5px;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+#secondBanner .second-banner__item {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-family: Arial;
+    list-style-type: disc;
+}
+#secondBanner .second-banner__item:last-child {
+    margin-bottom: 0;
+}
+#secondBanner .second-banner__asterix {
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    width: 94%;
+    text-align: right;
+}
+@media only screen and (max-width: 1646px) {
+    #secondBanner .second-banner__asterix {
+        bottom:-80px;
+    }
+}
+#secondBanner .second-banner__asterix p {
+    font-size: 12px;
+    line-height: 15px;
+    font-family: Arial;
+    color: #8D8D8D;
+}</style></div>
+    <div id="UnderHeaderBannerBody" class="slick-initialized slick-slider">
+
+    <div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 1560px; transform: translate3d(0px, 0px, 0px);"><div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 1560px;" tabindex="0">
+ <div id="secondBanner" class="second-banner-wrapper">
+  <section class="second-banner">
+   <div class="second-banner__solution">
+    <h1>Лучше, чем просто спецсчет</h1>
+    <p>Эксклюзивное решение</p>
+   </div>
+   <div class="second-banner__btn">
+    <a href="https://app.rts-tender.ru/supplier/lk/Participant/SpecialAccountApplication.aspx#/SpecialAccounts/Application/View" target="_blank" tabindex="0">Получить</a>
+   </div>
+   <ul class="second-banner__list">
+    <li class="second-banner__item">Специальный счет для участников закупок</li>
+    <li class="second-banner__item">Расчетный счет для бизнеса</li>
+    <li class="second-banner__item">Финансовые продукты онлайн</li>
+   </ul>
+  </section>
+  <div class="second-banner__asterix">
+   <p>* В настоящее время участникам закупок открываются расчетные счета. После заключения банками-партнерами соглашений о взаимодействии со всеми операторами ЭТП, определенными в соответствии с ч. 3 ст. 24.1 Закона 44-ФЗ, открытый расчетный счет будет наделен статусом специального банковского счета. Режим спец. счета будет применяться с даты начала функционирования указанных операторов ЭТП (не позднее 01.10.2018 г., см. письмо Минфина России от 25.06.2018 г. № 24-06-08/43650).</p>
+  </div>
+ </div>
+</div></div></div></div>
+</div>
+</div>
+
+        <div class="page">
+            <div class="page__content full-width" style="position: relative;">
+                
+
+
+
+
+
+
+
+
+
+
+<h1>
+    <div class="wgtMessageBox__wrapper" style="width: 100%;">
+        <div class="wgtMessageBox__title"></div>
+        <div class="wgtMessageBox__close" onclick="messageBox().hideMessage()"></div>
+        <div class="wgtMessageBox__content">
+            <ul></ul>
+        </div>
+    </div>
+Закупки</h1>
+<div class="result-count">Найдено закупок: <span class="pointer font-bold" data-bind="text: pageVM.totalRecords, click: pageVM.getTotalRecords">...</span></div>
+<div id="contentWrapper">
+    <div class="filter-panel">
+        <form class="form-with-enter-submit">
+            <div class="form-row">
+                <div class="form-row__form-coll col3 without-label">
+                    <div class="form-row__form-cell margin">
+                        <input type="text" data-bind="value: pageVM.tradeNumber" data-validation="int" placeholder="Номер закупки" />
+                    </div>
+                    <div class="form-row__form-cell margin">
+                        <input type="text" data-bind="value: pageVM.filterTradeName" placeholder="Наименование закупки" />
+                    </div>
+                        <div class="form-row__form-cell">
+                            <label class="inline">Код классификатора</label>
+                            <div class="wgClassificatorSelector">
+                                <div class="widgetClassificatorSelector-wrapper relative inline">
+                                    <input type="text" class="widgetClassificatorSelector input-with-multiselect" readonly="readonly" data-bind="attr: { placeholder: pageVM.widgetClassificatorSelectorText}" placeholder="Нет выбраных элементов" />
+                                    <span class="icon-dotted" data-bind="click: widgetCSVM.openDialog"></span>
+                                </div>
+                            </div>
+                        </div>
+                    
+
+                        <div class="form-row__form-cell checkbox-cell">
+                            <input type="checkbox" data-bind="checked: pageVM.onlyImmediateTrades" id="filterOnlyImmediateTrades" />
+                            <label class="checkbox-label" for="filterOnlyImmediateTrades">Показывать только срочные закупки</label>
+                        </div>
+
+                </div>
+                    <div class="form-row__form-coll col3 without-label">
+
+                        <div class="form-row__form-cell margin">
+                            <input type="text" data-bind="value: pageVM.filterCustomerRegion" placeholder="Регион заказчика" />
+                        </div>
+
+                        <div class="form-row__form-cell">
+                            <input type="text" data-bind="value: pageVM.filterCustomerFullNameOrInn" placeholder="Наименование или ИНН заказчика" />
+                        </div>
+                        <div class="form-row__form-cell">
+                            <input id="searchFieldChoiceRadioBtnGroup" type="radio" data-bind="checked: pageVM.useNameOrInn" value="name" name="ko_unique_1" /> <label>Искать по наименованию</label>
+                            <input id="searchFieldChoiceRadioBtnGroup" type="radio" data-bind="checked: pageVM.useNameOrInn" value="inn" name="ko_unique_2" /> <label>Искать по ИНН</label>
+                        </div>
+                    </div>
+                <div class="form-row__form-coll fixed_284">
+                    <div class="form-row__form-cell">
+                        <label class="inline">Начальная (максимальная) цена</label>
+                        <div class="table">
+                            <div class="table__row__cell">
+                                <input placeholder="от" type="text" data-bind="value: pageVM.filterPriceMin" data-validation="decimal" />
+                            </div>
+                            <div class="table__row__cell"> - </div>
+                            <div class="table__row__cell">
+                                <input placeholder="до" type="text" data-bind="value: pageVM.filterPriceMax" data-validation="decimal" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row__form-cell">
+                        <label class="inline">Дата начала подачи предложений</label>
+                        <div class="table">
+                            <div class="table__row__cell">
+                                <input placeholder="c" type="text" class="datepicker hasDatepicker" data-bind="value: pageVM.filterDateFrom" id="dp1576857671161" /><img class="ui-datepicker-trigger" src="/images/calendar.png" alt="Выберите дату" title="Выберите дату" />
+                            </div>
+                            <div class="table__row__cell"> - </div>
+                            <div class="table__row__cell">
+                                <input placeholder="по" type="text" class="datepicker hasDatepicker" data-bind="value: pageVM.filterDateTo" id="dp1576857671162" /><img class="ui-datepicker-trigger" src="/images/calendar.png" alt="Выберите дату" title="Выберите дату" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row__form-cell">
+                        <label class="inline">Дата окончания подачи предложений</label>
+                        <div class="table">
+                            <div class="table__row__cell">
+                                <input placeholder="c" type="text" class="datepicker hasDatepicker" data-bind="value: pageVM.filterEndDateFrom" id="dp1576857671163" /><img class="ui-datepicker-trigger" src="/images/calendar.png" alt="Выберите дату" title="Выберите дату" />
+                            </div>
+                            <div class="table__row__cell"> - </div>
+                            <div class="table__row__cell">
+                                <input placeholder="по" type="text" class="datepicker hasDatepicker" data-bind="value: pageVM.filterEndDateTo" id="dp1576857671164" /><img class="ui-datepicker-trigger" src="/images/calendar.png" alt="Выберите дату" title="Выберите дату" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row__form-coll">
+                </div>
+                                    <div class="form-row__form-coll">
+                        <div class="form-row__form-cell">
+                            <div class="btn-group">
+                                <button class="btn btn-grey" data-bind="click: pageVM.searchData">Найти</button>
+                                <a href="#" class="btn btn-grey" data-bind="click: pageVM.clearFilter">Очистить</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+        </form>
+        <div class="clearfix"></div>
+    </div>
+    <ul class="tabs" data-bind="foreach: pageVM.tradeStates()">
+        <li class="tabs__item active" data-bind="text: name, click: $root.pageVM.selectState, css: {active: value == $root.pageVM.filterTradeState()}">Все</li>
+    
+        <li class="tabs__item" data-bind="text: name, click: $root.pageVM.selectState, css: {active: value == $root.pageVM.filterTradeState()}">Прием предложений</li>
+    
+        <li class="tabs__item" data-bind="text: name, click: $root.pageVM.selectState, css: {active: value == $root.pageVM.filterTradeState()}">Рассмотрение предложений</li>
+    
+        <li class="tabs__item" data-bind="text: name, click: $root.pageVM.selectState, css: {active: value == $root.pageVM.filterTradeState()}">Заключение контрактов</li>
+    
+        <li class="tabs__item" data-bind="text: name, click: $root.pageVM.selectState, css: {active: value == $root.pageVM.filterTradeState()}">Завершена</li>
+    
+        <li class="tabs__item" data-bind="text: name, click: $root.pageVM.selectState, css: {active: value == $root.pageVM.filterTradeState()}">Не состоялась</li>
+    
+        <li class="tabs__item" data-bind="text: name, click: $root.pageVM.selectState, css: {active: value == $root.pageVM.filterTradeState()}">Отменена</li>
+    </ul>
+    <div class="toolbar">
+        <div class="toolbar__section fl-right">
+            
+
+<div class="paginator">
+    <!-- ko if: paginatorVM.totalPages() > 0 --><!-- /ko -->
+    <span>Позиций</span>
+    <div class="wg-selectbox">
+        <div class="select" data-bind="text: paginatorVM.itemsCount, click: paginatorVM.toggleItemsPerPageList">10</div>
+        <ul class="options" data-bind="foreach: { data: paginatorVM.itemsPerPage, as: 'item'} ">
+            <li data-bind="text: item, css: {active: item == $root.paginatorVM.itemsCount()}, click: $root.paginatorVM.selectItemsPerPage.bind($data, item)">5</li>
+        
+            <li data-bind="text: item, css: {active: item == $root.paginatorVM.itemsCount()}, click: $root.paginatorVM.selectItemsPerPage.bind($data, item)" class="active">10</li>
+        
+            <li data-bind="text: item, css: {active: item == $root.paginatorVM.itemsCount()}, click: $root.paginatorVM.selectItemsPerPage.bind($data, item)">20</li>
+        
+            <li data-bind="text: item, css: {active: item == $root.paginatorVM.itemsCount()}, click: $root.paginatorVM.selectItemsPerPage.bind($data, item)">50</li>
+        
+            <li data-bind="text: item, css: {active: item == $root.paginatorVM.itemsCount()}, click: $root.paginatorVM.selectItemsPerPage.bind($data, item)">100</li>
+        </ul>
+    </div>
+    <!-- /ko -->
+</div>
+
+        </div>
+    </div>
+    <div class="jqGrid-wrapper multiselectable commercial">
+        <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_jqGrid" dir="ltr" style="width: 1560px;"><div class="ui-widget-overlay jqgrid-overlay" id="lui_jqGrid"></div><div class="loading ui-state-default ui-state-active" id="load_jqGrid" style="display: none;">Выполняется операция</div><div class="ui-jqgrid-view" role="grid" id="gview_jqGrid" style="width: 1560px;"><div class="ui-jqgrid-titlebar ui-jqgrid-caption ui-widget-header ui-corner-top ui-helper-clearfix" style="display: none;"><a role="link" class="ui-jqgrid-titlebar-close ui-corner-all HeaderButton" title="Показать/Скрыть таблицу" style="right: 0px;"><span class="ui-icon ui-icon-circle-triangle-n"></span></a><span class="ui-jqgrid-title"></span></div><div class="ui-state-default ui-jqgrid-hdiv ui-corner-top" style="width: 1560px;"><div class="ui-jqgrid-hbox"><table class="ui-jqgrid-htable" style="width:1560px" role="presentation" aria-labelledby="gbox_jqGrid" cellspacing="0" cellpadding="0" border="0"><thead><tr class="ui-jqgrid-labels" role="row"><th id="jqGrid_Id" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 50px; display: none;"><div id="jqgh_jqGrid_Id" class="ui-jqgrid-sortable">Идентификатор закупки<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jqGrid_TradeNumber" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 113px;"><div id="jqgh_jqGrid_TradeNumber" class="ui-jqgrid-sortable">Номер закупки<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jqGrid_CustomerFullName" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 281px;"><div id="jqgh_jqGrid_CustomerFullName" class="ui-jqgrid-sortable">Организатор закупки<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jqGrid_TradeName" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 357px;"><div id="jqgh_jqGrid_TradeName" class="ui-jqgrid-sortable">Наименование закупки<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jqGrid_InitialPrice" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 113px;"><div id="jqgh_jqGrid_InitialPrice" class="ui-jqgrid-sortable">НМЦ,<i class="icon-rouble"></i><span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jqGrid_PublicationDate" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px;"><div id="jqgh_jqGrid_PublicationDate" class="ui-jqgrid-sortable">Дата и время начала подачи предложений<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jqGrid_FillingApplicationEndDate" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 178px;"><div id="jqgh_jqGrid_FillingApplicationEndDate" class="ui-jqgrid-sortable">Дата и время окончания подачи предложений<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jqGrid_HasApplications" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 131px;"><div id="jqgh_jqGrid_HasApplications" class="ui-jqgrid-sortable">Наличие предложений<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jqGrid_TradeStateName" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 197px;"><div id="jqgh_jqGrid_TradeStateName" class="ui-jqgrid-sortable">Статус<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jqGrid_IsImmediate" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><div id="jqgh_jqGrid_IsImmediate" class="ui-jqgrid-sortable">Срочная закупка<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jqGrid_ParticipantHasApplicationsOnTrade" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><div id="jqgh_jqGrid_ParticipantHasApplicationsOnTrade" class="ui-jqgrid-sortable">Наличие предложения от поставщика<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jqGrid_HasDealSignedOutsideEShop" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><div id="jqgh_jqGrid_HasDealSignedOutsideEShop" class="ui-jqgrid-sortable">Наличие заключенного контракта вне э. магазина<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th></tr></thead></table></div></div><div class="ui-jqgrid-bdiv" style="height: auto; width: 1560px;"><div style="position:relative;"><div></div><table id="jqGrid" tabindex="0" cellspacing="0" cellpadding="0" border="0" role="presentation" aria-multiselectable="false" aria-labelledby="gbox_jqGrid" class="ui-jqgrid-btable" style="width: 1560px;"><tbody><tr class="jqgfirstrow" role="row" style="height:auto"><td role="gridcell" style="height:0px;width:50px;display:none;"></td><td role="gridcell" style="height:0px;width:113px;"></td><td role="gridcell" style="height:0px;width:281px;"></td><td role="gridcell" style="height:0px;width:357px;"></td><td role="gridcell" style="height:0px;width:113px;"></td><td role="gridcell" style="height:0px;width:150px;"></td><td role="gridcell" style="height:0px;width:178px;"></td><td role="gridcell" style="height:0px;width:131px;"></td><td role="gridcell" style="height:0px;width:197px;"></td><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height:0px;width:150px;display:none;"></td></tr></tbody></table></div></div></div><div class="ui-jqgrid-resize-mark" id="rs_mjqGrid"> </div></div>
+    </div>
+    <div class="toolbar">
+        <div class="toolbar__section fl-right">
+            
+
+<div class="paginator">
+    <!-- ko if: paginatorVM.totalPages() > 0 --><!-- /ko -->
+    <span>Позиций</span>
+    <div class="wg-selectbox">
+        <div class="select" data-bind="text: paginatorVM.itemsCount, click: paginatorVM.toggleItemsPerPageList">10</div>
+        <ul class="options" data-bind="foreach: { data: paginatorVM.itemsPerPage, as: 'item'} ">
+            <li data-bind="text: item, css: {active: item == $root.paginatorVM.itemsCount()}, click: $root.paginatorVM.selectItemsPerPage.bind($data, item)">5</li>
+        
+            <li data-bind="text: item, css: {active: item == $root.paginatorVM.itemsCount()}, click: $root.paginatorVM.selectItemsPerPage.bind($data, item)" class="active">10</li>
+        
+            <li data-bind="text: item, css: {active: item == $root.paginatorVM.itemsCount()}, click: $root.paginatorVM.selectItemsPerPage.bind($data, item)">20</li>
+        
+            <li data-bind="text: item, css: {active: item == $root.paginatorVM.itemsCount()}, click: $root.paginatorVM.selectItemsPerPage.bind($data, item)">50</li>
+        
+            <li data-bind="text: item, css: {active: item == $root.paginatorVM.itemsCount()}, click: $root.paginatorVM.selectItemsPerPage.bind($data, item)">100</li>
+        </ul>
+    </div>
+    <!-- /ko -->
+</div>
+
+        </div>
+    </div>
+    <div class="legend">
+
+            <p class="text-yellow">
+                <i class="glyphicon icon-attention-yellow"></i> - Знак срочной закупки
+            </p>
+            <p class="text-yellow">
+                <i class="glyphicon color-square yellow"></i> - Цвет строки срочной закупки
+            </p>
+
+    </div>
+
+    <div class="widgetLoadingPanel">
+        <div class="widgetLoadingPanel__overlay"></div>
+        <div class="widgetLoadingPanel__spinner"></div>
+    </div>
+</div>
+
+<div class="hidden">
+    <div class="box-modal text-center" id="publicAppsModal" style="width: 256px">
+        <div class="box-modal_close">
+            <span class="icon-cancel"></span>
+        </div>
+        <div class="titleConfirm page">
+            <h2>Предложения</h2>
+            <div class="scroll-body mCustomScrollbar _mCS_1 mCS_no_scrollbar"><div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" style="max-height: 0px;" tabindex="0"><div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+                <table class="stripped-table">
+                    <tbody><tr>
+                        <th style="width: 50%">Участник</th>
+                        <th style="width: 50%">Цена <span class="icon-rouble"></span></th>
+                    </tr>
+                    </tbody><tbody data-bind="foreach: pageVM.PublicApplications"></tbody>
+                </table>
+            </div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+        </div>
+    </div>
+</div>
+
+<div style="display: none">
+    <div class="box-modal" id="wgClassicatorSelector">
+        <div class="box-modal_close arcticmodal-close"><span class="icon-cancel"></span></div>
+        <h1>
+            Код классификатора
+        </h1>
+        <div class="filter-panel" style="display: none">
+            <div class="form-row">
+                <div class="form-row__form-coll col2">
+                    <div class="form-row__form-cell">
+                        <input type="radio" data-bind="checked: widgetCSVM.searchType" name="searchType" value="name" id="searchByName" />
+                        <label for="searchByName">Поиск по наименованию</label>
+                    </div>
+                </div>
+                <div class="form-row__form-coll col2">
+                    <div class="form-row__form-cell">
+                        <input type="radio" data-bind="checked: widgetCSVM.searchType" name="searchType" value="code" id="searchByCode" />
+                        <label for="searchByCode">Поиск по коду</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-row__form-coll">
+                    <div class="form-row__form-cell">
+                        <input type="text" data-bind="value: widgetCSVM.searchValue, event: {keyup:  widgetCSVM.searchItemsKeyPress}" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-row__form-coll">
+                    <div class="form-row__form-cell text-right">
+                        <a href="#" data-bind="click: widgetCSVM.searchItems" class="btn btn-grey">Найти</a>
+                        <a href="#" data-bind="click: widgetCSVM.clearFilter" class="btn btn-grey">Очистить</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="messageWrapperInfo" data-bind="visible: _.size(widgetCSVM.searchMessage()) &gt; 0" style="display: none;">
+            <span data-bind="html: widgetCSVM.searchMessage"></span>
+        </div>
+        <div class="classificator-wrapper">
+            <!-- ko if: (widgetCSVM.displayMode() == 'tree')-->
+            <div class="widgetClassificatorSelector__list" data-bind="template: { name: 'tree-template', foreach: widgetCSVM.treeItems }"></div>
+            <!-- /ko -->
+            <!-- ko if: (widgetCSVM.displayMode() == 'search')--><!-- /ko -->
+            <!-- ko if: (widgetCSVM.displayMode() == 'errors')--><!-- /ko -->
+        </div>
+        <!-- ko if: (widgetCSVM.displayMode() !== 'errors')-->
+        <div class="button-group">
+            <div class="text-right">
+                <a class="btn btn-grey" data-bind="click: widgetCSVM.selectItemsClick">Выбрать</a>
+            </div>
+        </div>
+        <!-- /ko -->
+        <script type="text/html" id="tree-template">
+            &lt;div class="widgetClassificatorSelector__list"&gt;
+                &lt;div class="widgetClassificatorSelector__list-item"&gt;
+                    &lt;!-- ko if: HasChild --&gt;
+                    &lt;span class="table"&gt;
+                        &lt;span data-bind="css: {'icon-plus-squared-alt': ChildItemsViewState() == 'Collapsed', 'icon-minus-squared-alt': ChildItemsViewState() == 'Expanded',}, click: $root.widgetCSVM.getTreeItems" class="widgetClassificatorSelector__list-item__handler"&gt;&lt;/span&gt;&amp;nbsp;
+                        &lt;span class="widgetClassificatorSelector__list-item__checkbox"&gt;
+                            &lt;!-- ko if: State() == "UNSELECT" --&gt;
+                            &lt;i data-bind="click: $root.widgetCSVM.checkTreeItem" class="icon-check-empty"&gt;&lt;/i&gt;
+                            &lt;!-- /ko --&gt;
+                            &lt;!-- ko if: State() == 'SELECT' || State() == 'SELECT_PARENT'--&gt;
+                            &lt;i data-bind="click: $root.widgetCSVM.checkTreeItem" class="icon-check"&gt;&lt;/i&gt;
+                            &lt;!-- /ko --&gt;
+                            &lt;!-- ko if: State() == 'SELECT_PARTLY'--&gt;
+                            &lt;i data-bind="click: $root.widgetCSVM.checkTreeItem" class="icon-ok-squared"&gt;&lt;/i&gt;
+                            &lt;!-- /ko --&gt;
+                        &lt;/span&gt;
+                        &lt;span class="widgetClassificatorSelector__list-item__description" data-bind="click: $root.widgetCSVM.getTreeItems"&gt;&lt;span data-bind="text: Code"&gt;&lt;/span&gt;&amp;nbsp;-&amp;nbsp;&lt;span data-bind="text: Description"&gt;&lt;/span&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                    &lt;!-- ko if: HasChild &amp;&amp; ChildItemsViewState() == 'Expanded'--&gt;
+                    &lt;div class="widgetClassificatorSelector__list-item__list" data-bind="template: { name: 'tree-template', foreach: ChildItems }"&gt;&lt;/div&gt;
+                    &lt;!-- /ko --&gt;
+                    &lt;!-- /ko --&gt;
+                    &lt;!-- ko ifnot: HasChild --&gt;
+                    &lt;span class="table"&gt;
+                        &lt;span data-bind="click: $root.widgetCSVM.checkTreeItem" class="widgetClassificatorSelector__list-item__handler"&gt;&lt;/span&gt;&amp;nbsp;
+                        &lt;span class="widgetClassificatorSelector__list-item__checkbox"&gt;
+                            &lt;!-- ko if: State() == "UNSELECT" --&gt;
+                            &lt;i data-bind="click: $root.widgetCSVM.checkTreeItem" class="icon-check-empty"&gt;&lt;/i&gt;
+                            &lt;!-- /ko --&gt;
+                            &lt;!-- ko if: State() == 'SELECT' || State() == 'SELECT_PARENT'--&gt;
+                            &lt;i data-bind="click: $root.widgetCSVM.checkTreeItem" class="icon-check"&gt;&lt;/i&gt;
+                            &lt;!-- /ko --&gt;
+                            &lt;!-- ko if: State() == 'SELECT_PARTLY'--&gt;
+                            &lt;i data-bind="click: $root.widgetCSVM.checkTreeItem" class="icon-ok-squared"&gt;&lt;/i&gt;
+                            &lt;!-- /ko --&gt;
+                        &lt;/span&gt;
+                        &lt;span class="widgetClassificatorSelector__list-item__description" data-bind="click: $root.widgetCSVM.checkTreeItem"&gt;&lt;span data-bind="text: Code"&gt;&lt;/span&gt;&amp;nbsp;-&amp;nbsp;&lt;span data-bind="text: Description"&gt;&lt;/span&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                    &lt;!-- /ko --&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        </script>
+        <script type="text/html" id="search-template">
+            &lt;div class="widgetClassificatorSelector__list"&gt;
+                &lt;div class="widgetClassificatorSelector__list-item"&gt;
+                    &lt;!-- ko if: HasChild --&gt;
+                    &lt;span class="table"&gt;
+                        &lt;span data-bind="css: {'icon-plus-squared-alt': ChildItemsViewState() == 'Collapsed', 'icon-minus-squared-alt': ChildItemsViewState() == 'Expanded',}, click: $root.widgetCSVM.toggleCollapse" class="widgetClassificatorSelector__list-item__handler"&gt;&lt;/span&gt;&amp;nbsp;
+                        &lt;span class="widgetClassificatorSelector__list-item__checkbox"&gt;
+                            &lt;!-- ko if: State() == "UNSELECT" --&gt;
+                            &lt;i data-bind="click: $root.widgetCSVM.checkTreeItem" class="icon-check-empty"&gt;&lt;/i&gt;
+                            &lt;!-- /ko --&gt;
+                            &lt;!-- ko if: State() == 'SELECT' || State() == 'SELECT_PARENT'--&gt;
+                            &lt;i data-bind="click: $root.widgetCSVM.checkTreeItem" class="icon-check"&gt;&lt;/i&gt;
+                            &lt;!-- /ko --&gt;
+                            &lt;!-- ko if: State() == 'SELECT_PARTLY'--&gt;
+                            &lt;i data-bind="click: $root.widgetCSVM.checkTreeItem" class="icon-ok-squared"&gt;&lt;/i&gt;
+                            &lt;!-- /ko --&gt;
+                        &lt;/span&gt;
+                        &lt;span class="widgetClassificatorSelector__list-item__description" data-bind="click: $root.widgetCSVM.toggleCollapse"&gt;&lt;span data-bind="text: Code"&gt;&lt;/span&gt;&amp;nbsp;-&amp;nbsp;&lt;span data-bind="text: Description"&gt;&lt;/span&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                    &lt;!-- ko if: HasChild &amp;&amp; ChildItemsViewState() == 'Expanded'--&gt;
+                    &lt;div class="widgetClassificatorSelector__list-item__list" data-bind="template: { name: 'search-template', foreach: ChildItems }"&gt;&lt;/div&gt;
+                    &lt;!-- /ko --&gt;
+                    &lt;!-- /ko --&gt;
+                    &lt;!-- ko ifnot: HasChild --&gt;
+                    &lt;span class="table"&gt;
+                        &lt;span data-bind="click: $root.widgetCSVM.checkTreeItem" class="widgetClassificatorSelector__list-item__handler"&gt;&lt;/span&gt;&amp;nbsp;
+                        &lt;span class="widgetClassificatorSelector__list-item__checkbox"&gt;
+                            &lt;!-- ko if: State() == "UNSELECT" --&gt;
+                            &lt;i data-bind="click: $root.widgetCSVM.checkTreeItem" class="icon-check-empty"&gt;&lt;/i&gt;
+                            &lt;!-- /ko --&gt;
+                            &lt;!-- ko if: State() == 'SELECT' || State() == 'SELECT_PARENT'--&gt;
+                            &lt;i data-bind="click: $root.widgetCSVM.checkTreeItem" class="icon-check"&gt;&lt;/i&gt;
+                            &lt;!-- /ko --&gt;
+                            &lt;!-- ko if: State() == 'SELECT_PARTLY'--&gt;
+                            &lt;i data-bind="click: $root.widgetCSVM.checkTreeItem" class="icon-ok-squared"&gt;&lt;/i&gt;
+                            &lt;!-- /ko --&gt;
+                        &lt;/span&gt;
+                        &lt;span class="widgetClassificatorSelector__list-item__description" data-bind="click: $root.widgetCSVM.checkTreeItem"&gt;&lt;span data-bind="text: Code"&gt;&lt;/span&gt;&amp;nbsp;-&amp;nbsp;&lt;span data-bind="text: Description"&gt;&lt;/span&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                    &lt;!-- /ko --&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        </script>
+    </div>
+</div>
+
+<div class="hidden" id="modalHistoryGridTemplate">
+    <div id="innerModalGrid" class="content-wrapper">
+        <div class="box-modal text-center" style="width: 93%">
+            <div class="box-modal_close arcticmodal-close"><span class="icon-cancel"></span></div>
+            <h2 id="modalHistoryGridTemplateTitle"></h2>
+            <div class="toolbar">
+                <div class="toolbar__section fl-right">
+                    
+
+<div class="paginator">
+    <!-- ko if: modalPaginatorVM.totalPages() > 0 --><!-- /ko -->
+    <span>Позиций</span>
+    <div class="wg-selectbox">
+        <div class="select" data-bind="text: modalPaginatorVM.itemsCount, click: modalPaginatorVM.toggleItemsPerPageList">10</div>
+        <ul class="options" data-bind="foreach: { data: modalPaginatorVM.itemsPerPage, as: 'item'} ">
+            <li data-bind="text: item, css: {active: item == $root.modalPaginatorVM.itemsCount()}, click: $root.modalPaginatorVM.selectItemsPerPage.bind($data, item)">5</li>
+        
+            <li data-bind="text: item, css: {active: item == $root.modalPaginatorVM.itemsCount()}, click: $root.modalPaginatorVM.selectItemsPerPage.bind($data, item)" class="active">10</li>
+        
+            <li data-bind="text: item, css: {active: item == $root.modalPaginatorVM.itemsCount()}, click: $root.modalPaginatorVM.selectItemsPerPage.bind($data, item)">20</li>
+        
+            <li data-bind="text: item, css: {active: item == $root.modalPaginatorVM.itemsCount()}, click: $root.modalPaginatorVM.selectItemsPerPage.bind($data, item)">50</li>
+        
+            <li data-bind="text: item, css: {active: item == $root.modalPaginatorVM.itemsCount()}, click: $root.modalPaginatorVM.selectItemsPerPage.bind($data, item)">100</li>
+        </ul>
+    </div>
+    <!-- /ko -->
+</div>
+
+                </div>
+            </div>
+            <div class="jqGrid-wrapper">
+                <table id="modalHistoryJqGrid"></table>
+            </div>
+            <div class="toolbar">
+                <div class="toolbar__section fl-right">
+                    
+
+<div class="paginator">
+    <!-- ko if: modalPaginatorVM.totalPages() > 0 --><!-- /ko -->
+    <span>Позиций</span>
+    <div class="wg-selectbox">
+        <div class="select" data-bind="text: modalPaginatorVM.itemsCount, click: modalPaginatorVM.toggleItemsPerPageList">10</div>
+        <ul class="options" data-bind="foreach: { data: modalPaginatorVM.itemsPerPage, as: 'item'} ">
+            <li data-bind="text: item, css: {active: item == $root.modalPaginatorVM.itemsCount()}, click: $root.modalPaginatorVM.selectItemsPerPage.bind($data, item)">5</li>
+        
+            <li data-bind="text: item, css: {active: item == $root.modalPaginatorVM.itemsCount()}, click: $root.modalPaginatorVM.selectItemsPerPage.bind($data, item)" class="active">10</li>
+        
+            <li data-bind="text: item, css: {active: item == $root.modalPaginatorVM.itemsCount()}, click: $root.modalPaginatorVM.selectItemsPerPage.bind($data, item)">20</li>
+        
+            <li data-bind="text: item, css: {active: item == $root.modalPaginatorVM.itemsCount()}, click: $root.modalPaginatorVM.selectItemsPerPage.bind($data, item)">50</li>
+        
+            <li data-bind="text: item, css: {active: item == $root.modalPaginatorVM.itemsCount()}, click: $root.modalPaginatorVM.selectItemsPerPage.bind($data, item)">100</li>
+        </ul>
+    </div>
+    <!-- /ko -->
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+            </div>
+        </div>
+        <!-- Footer Block -->
+
+
+<div class="footer">
+        <div class="footer__columns">
+            <div class="column copyright">
+                © 2000-2019 ООО «РТС-тендер»<br />
+                Все права защищены<br /><br />
+				8-800-77-55-800
+				<div class="social" style="min-height: 20px;">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/RTS.tender" target="_blank">
+                            <span class="icon social-icon facebook">facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://vk.com/rtstender" target="_blank">
+                            <span class="icon social-icon vk">vkontakte</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.youtube.com/channel/UCvA114k2xebV4FaaEQaQg1A" target="_blank">
+                            <span class="icon social-icon youtube">youtube</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+				<div class="column__title">SERVER: 130.53</div>
+				<div class="column__title">VERSION: 1/0/0/158476</div>
+            </div>
+            <div class="column">
+                <div class="column__title">заказчикам</div>
+                <ul>
+                    <li>
+                        <a href="http://www.rts-tender.ru/legislation/forcustomer" class="footer_link">Законодательство</a>
+                    </li>
+                    <li>
+                        <a class="footer_link">Регламент</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="column">
+                <div class="column__title">поставщикам</div>
+                <ul>
+                    <li>
+                        <a href="/Account/RegisterParticipant" class="footer_link">Регистрация</a>
+                    </li>
+                    <li>
+                        <a href="http://www.rts-tender.ru/legislation/forcustomer" class="footer_link">Законодательство</a>
+                    </li>
+                    <li>
+                        <a class="footer_link">Регламент</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <div class="column__title">о компании</div>
+                <ul>
+                    <li>
+                        <a href="http://www.rts-tender.ru/about/contacts" class="footer_link">Контакты</a>
+                    </li>
+                    <li>
+                        <a href="http://www.rts-tender.ru/about/history" class="footer_link">История</a>
+                    </li>
+                    <li>
+                        <a href="http://www.rts-tender.ru/about/partners" class="footer_link">Партнеры</a>
+                    </li>
+                    <li>
+                        <a href="http://www.rts-tender.ru/about/vacancy" class="footer_link">Вакансии</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="column">
+                <div class="column__title">Инструкции</div><ul style="list-style-type: none">  
+		<li>
+                    <a href="http://help.rts-tender.ru/manual/menu?id=19" class="footer_link" target="_blank">Инструкция участника</a>
+		</li>
+		<li> 
+                    <a href="http://help.rts-tender.ru/articles/menu?id=153" class="footer_link" target="_blank">РТС-маркет</a>
+		</li></ul>
+	</div>
+            <div class="column">
+                <div class="column__title">техподдержка</div>
+                <ul>
+                    <li>
+                        <a href="mailto:support@rts-tender.ru" class=" footer_link">Для заказчиков</a>
+                    </li>
+                    <li>
+                        <a href="mailto:info@rts-tender.ru" class=" footer_link">Для поставщиков</a>
+                    </li>
+                    <li>
+                        <a href="http://www.rts-tender.ru/portals/0/Files/rts-tender%20support.exe" class="footer_link">Удаленная техподдержка</a>
+                    </li>
+					<li>
+			<div style="font-family: 'Trebuchet MS',Arial,Helvetica,sans-serif;&#10;font-size: 14px; color: #fbfbfe;"><br />Телефон техподдержки:<br />8-800-77-55-800</div>
+                </li></ul>
+            </div>
+        </div>
+    </div>
+ 
+
+    </div>
+    
+    <script src="/bundles/initjqgrid?v=kOURjUCcHg0R6dC2KX7SxF0TCYJokTTG6e1BZsHUp_U1"></script>
+
+    <script src="/bundles/tradeGrid?v=sAjLMZUiMrcW3zCwMSH1zCwzHPfCk7gzenJn0r209ZQ1"></script>
+
+<script type="text/javascript">
+    var isImmediateAllowed = true;
+    var IsDefaultTenant = false;
+    var IsHideApplicationData = false;
+    var PublicAppEnable = true;
+            
+            var baseUriForGrid = 'https://223-zmo-trunk-api.rts-tender.ru/api/Trade/GetTradesForParticipantOrAnonymous';
+            var grid = jqGridModelHelper.tradeGrids().GetTradeGridForParticipantOrAnonymous(
+            {
+                isImmediateAllowed: isImmediateAllowed,
+                    frmTradeViewLinkForTradeGrid: frmTradeViewLinkForTradeGrid
+            });
+            
+        var reportData = [];
+        var gridOptions = {
+            loadComplete: function() {
+                var ids = $(this).jqGrid("getDataIDs"), l = ids.length, i, rowid, status;
+                for (i = 0; i &lt; l; i++) {
+                    rowid = ids[i];
+                    status = $(this).jqGrid("getCell", rowid, "IsImmediate");
+                    if (status === "true" &amp;&amp; isImmediateAllowed) {
+                        $('#' + $.jgrid.jqID(rowid)).addClass('attention');
+                    }
+                }
+            }
+        };
+        initGrid(grid.colNames, grid.colModel, reportData, gridOptions);
+
+            
+                tradesVM.tradeStates(JSON.parse('[{"name":"Все","value":""},{"name":"Прием предложений","value":"2"},{"name":"Рассмотрение предложений","value":"3"},{"name":"Заключение контрактов","value":"9"},{"name":"Завершена","value":"10"},{"name":"Не состоялась","value":"6"},{"name":"Отменена","value":"4"}]'));
+            
+
+        // Заполнение списка типов классификатора
+
+            
+            tradesVM.classificatorTypes([{ id: 5, title: "ОКПД2" }]);
+            
+
+        tradesVM.filterClassificatorCodes([]);
+/**/
+/**/
+
+        tradesVM.maxExportResultSet(200);
+
+        tradesVM.showMarketRedirect(false);
+
+        koVMs.pageVM = tradesVM;
+        koVMs.paginatorVM = vmPaginator();
+        koVMs.modalPaginatorVM = vmPaginator();
+        $(document).on("updateGrid", koVMs.pageVM.changePage);
+        koVMs.pageVM.init(grid.colNames, grid.colModel);
+        koVMs.widgetCSVM = classificatorMultiSelectorVM();
+        koVMs.widgetCSVM.init({
+            classificatorType: tradesVM.filterClassificatorType,
+            classificatorTypesList: tradesVM.classificatorTypes,
+            selectedItems: tradesVM.filterClassificatorCodes,
+            partlySelectedItems: ko.observableArray([])
+        });
+
+        var modalVm = new HistoryViewAndDownloadGridVm();
+
+        $(".process_redirect").click(function (e) {
+            e.preventDefault();
+
+            var needRedirect = $(this).data('needredirect');
+            var action = $(this).data('marketaction');
+            var defaultUrl = $(this).attr('href');
+
+            marketRedirectWidget.redirectToMarket(needRedirect, action, function () {
+                window.location.href = defaultUrl;
+            });
+        });
+</script>
+
+
+
+
+
+
+    
+<script type="text/javascript">
+
+
+    ko.applyBindings(koVMs);
+    $(document).mouseup(function (e) {
+        var container = $(".wg-selectbox .options");
+
+        if (!container.is(e.target) // if the target of the click isn't the container...
+                        &amp;&amp; container.has(e.target).length === 0) // ... nor a descendant of the container
+                    {
+                        container.hide();
+                    }
+                });
+
+                    
+                        function onTimerTick(date)
+                        {
+                            $('#currentTime').text(getTimeString(date));
+                            $('#currentDate').text(getDateString(date));
+                        }
+                    
+                    
+                    var serverDateTime = new Date(2019, 11, 20, 19, 1, 9);
+                    startServerDate(serverDateTime, onTimerTick);
+                    
+
+</script>
+
+
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div></body></html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Вход</title>
+
+    <link href="/api/common/Content/SSOBootstrap?v=PUDFxlRUUS8e8pp6Y9WeVnF_4RmJM7BwtYyTz0D-zu81" rel="stylesheet" />
+
+    <link href="/api/common/Content/SSOMain?v=NWJ9bfIyCB7e-Ty-15a8hoC7zrUI_wrxXfVuiRKbWjY1" rel="stylesheet" />
+
+    
+    <script type="text/javascript">
+        var cryptoProBrowserPluginProviderAsyncUrl = '/api/common/Scripts/CryptoProBrowserPluginProviderAsync?v=_-7nI1vcSrASeTBOp7cxOZdclSym5RY4CAR_Zj6mjjQ1\
+';
+        var cryptoProBrowserPluginProviderSyncUrl = '/api/common/Scripts/CryptoProBrowserPluginProviderSync?v=JZUanaask544lK_74xi9DknTBBGnkO87Jj4bYjiKIpA1\
+';
+    </script>
+
+    <!--[if lt IE 9]>
+        <script src="/api/common/Scripts/html5?v=Ckm2MwaYIZHcbw_98dOShHA96_CADEJxvtNOPiYqCok1"></script>
+
+    <![endif]-->
+    <!--[if (gt IE 8)|!(IE)]><!-->
+    <link href="/api/common/Content/SSOCustomCheckbox?v=J2fYd5dcozdvwyL7IEfF6iPozDxT9lUmF9x6k4SxK9Y1" rel="stylesheet" />
+
+    <!--<![endif]-->        
+<script type="text/javascript" src="chrome-extension://iifchhfnnmpdbibifmljnfjhpififfog/nmcades_plugin_api.js"></script><script type="text/javascript" src="chrome-extension://epebfcehmdedogndhlcacafjaacknbcm/nmcades_plugin_api.js"></script><script type="text/javascript" src="/api/common/Scripts/CryptoProBrowserPluginProviderAsync?v=_-7nI1vcSrASeTBOp7cxOZdclSym5RY4CAR_Zj6mjjQ1"></script></head>
+<body>
+
+<div class="container body-content auth-inner-content" style="padding-top: 20px;">
+    <script src="/api/common/bundles/SSOJQuery?v=OAdR3sd0MvhqDSHclhTWnsfCTE7DXeAzNhxTg-uQbsc1"></script>
+
+    <p><img src="/api/common/Images/rts-tender.png" alt="" width="228" height="99" /></p>
+    
+
+
+<form method="POST" role="form">
+    <input name="__RequestVerificationToken" type="hidden" value="2IHiJFDT7-0yUK6EQ_eWjpaokUhTeGfjZMhavuzNk1DaQ8sckBsK_1sT4fp8KXfRC3e4lNxD4GMjd2NbpulbrfKWDJI1" />
+
+    <div class="form-horizontal well">
+        <div class="form-group">
+            <label class="control-label col-sm-4 col-md-3 col-lg-4" for="Login" style="display:block">Имя пользователя (логин)</label>
+            <span class="col-sm-4 col-md-5 col-lg-6">
+                <input class="k-textbox form-control" id="Login" name="Login" type="text" value="" />
+            </span>
+            <span class="field-validation-valid text-danger col-md-7 col-lg-8" data-valmsg-for="Login" data-valmsg-replace="true" style="display:block"></span>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-4 col-md-3 col-lg-4" for="Password" style="display:block">Пароль</label>
+            <span class="col-sm-4 col-md-5 col-lg-6">
+                <input class="form-control k-textbox form-control" id="Password" name="Password" type="password" />
+            </span>
+            <span class="field-validation-valid text-danger col-md-7 col-lg-8" data-valmsg-for="Password" data-valmsg-replace="true" style="display:block"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <table class="table table10" id="certlist">
+            <tbody style="height: auto;"><tr>
+                <th style="width: 335px;">Наименование</th>
+                <th>Роль</th>
+                <th style="min-width: 165px;width: 165px;">Срок действия</th>
+            </tr>
+        </tbody></table>
+        <input id="SignedData" name="SignedData" type="hidden" value="" />
+    </div>
+    <div class="form-group">
+        <p class="text-danger" id="summaryValidationMessage"><span class="field-validation-valid" data-valmsg-for="summary" data-valmsg-replace="true"></span></p>
+        <input type="submit" id="submitSignin" name="submit.Signin" value="Войти" class="btn btn10" disabled="" />
+    </div>
+    <object id="cadesplugin" type="application/x-cades" style="visibility: hidden; height: 0;"></object>
+</form>
+
+<script type="text/javascript">
+    var dateDateForSign = "MTIvMjQvMjAxOSAxMjoxOTo0Mg==";
+    var isCustomerAuth = true;
+    var isMixedMarketAuth = false;
+</script>
+
+<script src="/api/common/Scripts/SSOLogin?v=w1lO4ic1lPbyRtjs9dbrSNhsne3IXPbX6fH4ScVB5Vg1"></script>
+
+<script src="/api/common/Scripts/SSORtsCrypto?v=pEObclZ9csXxgkDxxevPOPLfh30IIvILESoRDnkNGTo1"></script>
+
+<script src="/api/common/Scripts/CryptoPro?v=jcb7pDlHpwbGPQPzW47ReyDqd0OebvktpOSPF8yQDRw1"></script>
+
+</div>
+
+    <script src="/api/common/bundles/bootstrap?v=2Fz3B0iizV2NnnamQFrx-NbYJNTFeBJ2GM05SilbtQU1"></script>
+
+    
+
+
+</body></html>

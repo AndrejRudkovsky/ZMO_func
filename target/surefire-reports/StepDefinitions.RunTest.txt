@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: StepDefinitions.RunTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.018 sec <<< FAILURE! - in StepDefinitions.RunTest
+initializationError(StepDefinitions.RunTest)  Time elapsed: 0.017 sec  <<< ERROR!
+java.lang.IncompatibleClassChangeError: Class cucumber.runtime.RuntimeOptions does not implement the requested interface io.cucumber.core.options.FeatureOptions
+

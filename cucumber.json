@@ -1,0 +1,316 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 6824657900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ChromeInitialization.openChrome()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Открытие страницы, пеход на страницу авторизации, авторизация заказчиком 223 по сертификату",
+        "description": "",
+        "id": "открытие-страницы-змо-и-авторизация-заказчиком;открытие-страницы,-пеход-на-страницу-авторизации,-авторизация-заказчиком-223-по-сертификату",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1904410400,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Открываем https://223-zmo-trunk-ui.rts-tender.ru/",
+            "match": {
+              "location": "LogonCustomerZmo.open_zmo_mail_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 306194200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Ждём загрузки страницы - ожидание исчезновения спиннера",
+            "match": {
+              "location": "LogonCustomerZmo.spinner_wait()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1574324800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Переход на страницу авторизации через Вход",
+            "match": {
+              "location": "LogonCustomerZmo.go_authorization_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 21702300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Ждём загрузки страницы - ожидание исчезновения спиннера перед авторизацией",
+            "match": {
+              "location": "LogonCustomerZmo.spinner_wait_before_auth()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1552770500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Переход на страницу авторизации Вход по 223ФЗ РТС-Тендер в разделе Для заказчика",
+            "match": {
+              "location": "LogonCustomerZmo.go_authorization_page_223_customer()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1988095000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Выбираем сертификат",
+            "match": {
+              "location": "LogonCustomerZmo.wait_downloading_sertificate_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 87224200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Нажимаем кнопку Войти",
+            "match": {
+              "location": "LogonCustomerZmo.sertificate_choise()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18802300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Ждём загрузки страницы - ожидание исчезновения спиннера после авторизации",
+            "match": {
+              "location": "LogonCustomerZmo.spinner_wait_after_sertificate_choise()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2587535300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Проверяем нужно ли разрешение на доступ",
+            "match": {
+              "location": "LogonCustomerZmo.need_acces_to_certificate()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 116226600,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Отображаем наименование организации прописанное на странице",
+            "match": {
+              "location": "LogonCustomerZmo.show_organization_from_main_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Открытие страницы ЗМО и авторизация заказчиком",
+    "description": "",
+    "id": "открытие-страницы-змо-и-авторизация-заказчиком",
+    "keyword": "Feature",
+    "uri": "features/main_feature.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@request_for_quotations1"
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 5949615400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ChromeInitialization.openChrome()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Открытие страницы, пеход на страницу авторизации, авторизация заказчиком 223 по сертификату",
+        "description": "",
+        "id": "открытие-страницы-змо-и-авторизация-заказчиком;открытие-страницы,-пеход-на-страницу-авторизации,-авторизация-заказчиком-223-по-сертификату",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1927936000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Открываем https://223-zmo-trunk-ui.rts-tender.ru/",
+            "match": {
+              "location": "LogonCustomerZmo.open_zmo_mail_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 394763300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Ждём загрузки страницы - ожидание исчезновения спиннера",
+            "match": {
+              "location": "LogonCustomerZmo.spinner_wait()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1291977700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Переход на страницу авторизации через Вход",
+            "match": {
+              "location": "LogonCustomerZmo.go_authorization_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 22247800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Ждём загрузки страницы - ожидание исчезновения спиннера перед авторизацией",
+            "match": {
+              "location": "LogonCustomerZmo.spinner_wait_before_auth()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1188973900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Переход на страницу авторизации Вход по 223ФЗ РТС-Тендер в разделе Для заказчика",
+            "match": {
+              "location": "LogonCustomerZmo.go_authorization_page_223_customer()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1962980700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Выбираем сертификат",
+            "match": {
+              "location": "LogonCustomerZmo.wait_downloading_sertificate_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 84695400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Нажимаем кнопку Войти",
+            "match": {
+              "location": "LogonCustomerZmo.sertificate_choise()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 25565800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Ждём загрузки страницы - ожидание исчезновения спиннера после авторизации",
+            "match": {
+              "location": "LogonCustomerZmo.spinner_wait_after_sertificate_choise()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3717032600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Проверяем нужно ли разрешение на доступ",
+            "match": {
+              "location": "LogonCustomerZmo.need_acces_to_certificate()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 71638100,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Отображаем наименование организации прописанное на странице",
+            "match": {
+              "location": "LogonCustomerZmo.show_organization_from_main_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Открытие страницы ЗМО и авторизация заказчиком",
+    "description": "",
+    "id": "открытие-страницы-змо-и-авторизация-заказчиком",
+    "keyword": "Feature",
+    "uri": "features/second_feature.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@request_for_quotations2"
+      }
+    ]
+  }
+]
