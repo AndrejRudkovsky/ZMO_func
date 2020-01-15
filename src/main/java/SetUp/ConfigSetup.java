@@ -12,4 +12,7 @@ public class ConfigSetup {
     protected String grantAcces = "input[name='submit.Grant']";
     protected String organizationNameOnMainPage = "div[id='ellipsis-multiline']";
     //protected String organizationInnOnMainPage = "div[id='ellipsis-multiline']";
+    protected String XnameOfSupZMO = "//*[contains(text(),'Поставщик ЗМО 13.11.2017')]";
+    protected String enter223SupplierButton = "a[name='Rts223Participant']";
+
 }

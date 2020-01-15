@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 6824657900,
+  "duration": 6500844900,
   "status": "passed"
 });
 formatter.scenario({
@@ -78,78 +78,78 @@ formatter.match({
   "location": "LogonCustomerZmo.open_zmo_mail_page()"
 });
 formatter.result({
-  "duration": 1904410400,
+  "duration": 2630260700,
   "status": "passed"
 });
 formatter.match({
   "location": "LogonCustomerZmo.spinner_wait()"
 });
 formatter.result({
-  "duration": 306194200,
+  "duration": 264121300,
   "status": "passed"
 });
 formatter.match({
   "location": "LogonCustomerZmo.go_authorization_page()"
 });
 formatter.result({
-  "duration": 1574324800,
+  "duration": 1288810200,
   "status": "passed"
 });
 formatter.match({
   "location": "LogonCustomerZmo.spinner_wait_before_auth()"
 });
 formatter.result({
-  "duration": 21702300,
+  "duration": 21456200,
   "status": "passed"
 });
 formatter.match({
   "location": "LogonCustomerZmo.go_authorization_page_223_customer()"
 });
 formatter.result({
-  "duration": 1552770500,
+  "duration": 1298730000,
   "status": "passed"
 });
 formatter.match({
   "location": "LogonCustomerZmo.wait_downloading_sertificate_page()"
 });
 formatter.result({
-  "duration": 1988095000,
+  "duration": 1556467900,
   "status": "passed"
 });
 formatter.match({
   "location": "LogonCustomerZmo.sertificate_choise()"
 });
 formatter.result({
-  "duration": 87224200,
+  "duration": 70827400,
   "status": "passed"
 });
 formatter.match({
   "location": "LogonCustomerZmo.spinner_wait_after_sertificate_choise()"
 });
 formatter.result({
-  "duration": 18802300,
+  "duration": 17562000,
   "status": "passed"
 });
 formatter.match({
   "location": "LogonCustomerZmo.need_acces_to_certificate()"
 });
 formatter.result({
-  "duration": 2587535300,
+  "duration": 2548539200,
   "status": "passed"
 });
 formatter.match({
   "location": "LogonCustomerZmo.show_organization_from_main_page()"
 });
 formatter.result({
-  "duration": 116226600,
+  "duration": 68993900,
   "status": "passed"
 });
 formatter.uri("features/second_feature.feature");
 formatter.feature({
   "line": 2,
-  "name": "Открытие страницы ЗМО и авторизация заказчиком",
+  "name": "Открытие страницы ЗМО и авторизация поставщиком",
   "description": "",
-  "id": "открытие-страницы-змо-и-авторизация-заказчиком",
+  "id": "открытие-страницы-змо-и-авторизация-поставщиком",
   "keyword": "Feature",
   "tags": [
     {
@@ -159,135 +159,135 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 5949615400,
+  "duration": 5330378800,
   "status": "passed"
 });
 formatter.scenario({
   "line": 3,
-  "name": "Открытие страницы, пеход на страницу авторизации, авторизация заказчиком 223 по сертификату",
+  "name": "Открытие страницы, пеход на страницу авторизации, авторизация поставщиком 223 по сертификату",
   "description": "",
-  "id": "открытие-страницы-змо-и-авторизация-заказчиком;открытие-страницы,-пеход-на-страницу-авторизации,-авторизация-заказчиком-223-по-сертификату",
+  "id": "открытие-страницы-змо-и-авторизация-поставщиком;открытие-страницы,-пеход-на-страницу-авторизации,-авторизация-поставщиком-223-по-сертификату",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
   "line": 4,
-  "name": "Открываем https://223-zmo-trunk-ui.rts-tender.ru/",
+  "name": "Открываем https://223-zmo-trunk-ui.rts-tender.ru/. Поставщик",
   "keyword": "Given "
 });
 formatter.step({
   "line": 5,
-  "name": "Ждём загрузки страницы - ожидание исчезновения спиннера",
+  "name": "Ждём загрузки страницы - ожидание исчезновения спиннера. Поставщик",
   "keyword": "And "
 });
 formatter.step({
   "line": 6,
-  "name": "Переход на страницу авторизации через Вход",
+  "name": "Переход на страницу авторизации через Вход. Поставщик",
   "keyword": "Then "
 });
 formatter.step({
   "line": 7,
-  "name": "Ждём загрузки страницы - ожидание исчезновения спиннера перед авторизацией",
+  "name": "Ждём загрузки страницы - ожидание исчезновения спиннера перед авторизацией. Поставщик",
   "keyword": "And "
 });
 formatter.step({
   "line": 8,
-  "name": "Переход на страницу авторизации Вход по 223ФЗ РТС-Тендер в разделе Для заказчика",
+  "name": "Переход на страницу авторизации Вход по 223ФЗ РТС-Тендер в разделе Для поставщика",
   "keyword": "Then "
 });
 formatter.step({
   "line": 9,
-  "name": "Выбираем сертификат",
+  "name": "Выбираем сертификат. Поставщик",
   "keyword": "And "
 });
 formatter.step({
   "line": 10,
-  "name": "Нажимаем кнопку Войти",
+  "name": "Нажимаем кнопку Войти. Поставщик",
   "keyword": "And "
 });
 formatter.step({
   "line": 11,
-  "name": "Ждём загрузки страницы - ожидание исчезновения спиннера после авторизации",
+  "name": "Ждём загрузки страницы - ожидание исчезновения спиннера после авторизации. Поставщик",
   "keyword": "And "
 });
 formatter.step({
   "line": 12,
-  "name": "Проверяем нужно ли разрешение на доступ",
+  "name": "Проверяем нужно ли разрешение на доступ. Поставщик",
   "keyword": "And "
 });
 formatter.step({
   "line": 13,
-  "name": "Отображаем наименование организации прописанное на странице",
+  "name": "Отображаем наименование организации прописанное на странице. Поставщик",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LogonCustomerZmo.open_zmo_mail_page()"
+  "location": "LogonSupplierZmo.open_zmo_mail_page()"
 });
 formatter.result({
-  "duration": 1927936000,
+  "duration": 1862815800,
   "status": "passed"
 });
 formatter.match({
-  "location": "LogonCustomerZmo.spinner_wait()"
+  "location": "LogonSupplierZmo.spinner_wait()"
 });
 formatter.result({
-  "duration": 394763300,
+  "duration": 823979100,
   "status": "passed"
 });
 formatter.match({
-  "location": "LogonCustomerZmo.go_authorization_page()"
+  "location": "LogonSupplierZmo.go_authorization_page()"
 });
 formatter.result({
-  "duration": 1291977700,
+  "duration": 1176486600,
   "status": "passed"
 });
 formatter.match({
-  "location": "LogonCustomerZmo.spinner_wait_before_auth()"
+  "location": "LogonSupplierZmo.spinner_wait_before_auth()"
 });
 formatter.result({
-  "duration": 22247800,
+  "duration": 16456500,
   "status": "passed"
 });
 formatter.match({
-  "location": "LogonCustomerZmo.go_authorization_page_223_customer()"
+  "location": "LogonSupplierZmo.go_authorization_page_223_customer()"
 });
 formatter.result({
-  "duration": 1188973900,
+  "duration": 1350911400,
   "status": "passed"
 });
 formatter.match({
-  "location": "LogonCustomerZmo.wait_downloading_sertificate_page()"
+  "location": "LogonSupplierZmo.wait_downloading_sertificate_page()"
 });
 formatter.result({
-  "duration": 1962980700,
+  "duration": 1681843000,
   "status": "passed"
 });
 formatter.match({
-  "location": "LogonCustomerZmo.sertificate_choise()"
+  "location": "LogonSupplierZmo.sertificate_choise()"
 });
 formatter.result({
-  "duration": 84695400,
+  "duration": 129424900,
   "status": "passed"
 });
 formatter.match({
-  "location": "LogonCustomerZmo.spinner_wait_after_sertificate_choise()"
+  "location": "LogonSupplierZmo.spinner_wait_after_sertificate_choise()"
 });
 formatter.result({
-  "duration": 25565800,
+  "duration": 18818600,
   "status": "passed"
 });
 formatter.match({
-  "location": "LogonCustomerZmo.need_acces_to_certificate()"
+  "location": "LogonSupplierZmo.need_acces_to_certificate()"
 });
 formatter.result({
-  "duration": 3717032600,
+  "duration": 2763884000,
   "status": "passed"
 });
 formatter.match({
-  "location": "LogonCustomerZmo.show_organization_from_main_page()"
+  "location": "LogonSupplierZmo.show_organization_from_main_page()"
 });
 formatter.result({
-  "duration": 71638100,
+  "duration": 53498000,
   "status": "passed"
 });
 });
