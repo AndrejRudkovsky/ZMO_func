@@ -1,4 +1,4 @@
-@request_for_quotations2
+@supplier_feat
 Feature: Открытие страницы ЗМО и авторизация поставщиком
  Scenario: Открытие страницы, пеход на страницу авторизации, авторизация поставщиком 223 по сертификату
    Given Открываем https://223-zmo-trunk-ui.rts-tender.ru/. Поставщик

@@ -8,6 +8,6 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "classpath:features",
         plugin = {"pretty", "html:target/cucumber-html-report","json:cucumber.json"},
-        tags = {"@request_for_quotations1,@request_for_quotations2"}
+        tags = {"@customer_feat"}
 )
 public class RunTest {}
