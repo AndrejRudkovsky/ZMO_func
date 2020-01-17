@@ -11,6 +11,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
+import java.io.File;
 
 
 public class LogonCustomerZmo extends ConfigSetup {
@@ -50,7 +51,7 @@ public class LogonCustomerZmo extends ConfigSetup {
     public void wait_downloading_sertificate_page() {
         $(By.xpath(XnameOfZakZMO)).waitUntil(visible,20000).click();
     }
-    @Then ("^Нажимаем кнопку Войти$")
+    @And ("^Нажимаем кнопку Войти$")
     public void sertificate_choise() {
         $(By.cssSelector(enterCertificateButton)).click();
     }
@@ -70,5 +71,10 @@ public class LogonCustomerZmo extends ConfigSetup {
     public void show_organization_from_main_page() {
         System.out.println($(By.cssSelector(organizationNameOnMainPage)).getText());
     }
-
+    @Then ("^All$")
+    public void all() {
+        $(By.cssSelector(createTradeButtonOnMainPage)).waitUntil(visible,20000).click();
+        $(By.cssSelector(deliveryTerms)).waitUntil(visible,20000).sendKeys("привет");
+        $(By.cssSelector(tradeAddFile)).uploadFile(new File("D:/Market/IpsumLorem.docx"));
+    }
 }
