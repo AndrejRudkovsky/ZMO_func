@@ -2,10 +2,11 @@ package StepDefinitions;
 
 import SetUp.ConfigSetup;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -73,8 +74,54 @@ public class LogonCustomerZmo extends ConfigSetup {
     }
     @Then ("^All$")
     public void all() {
-        $(By.cssSelector(createTradeButtonOnMainPage)).waitUntil(visible,20000).click();
-        $(By.cssSelector(deliveryTerms)).waitUntil(visible,20000).sendKeys("привет");
-        $(By.cssSelector(tradeAddFile)).uploadFile(new File("D:/Market/IpsumLorem.docx"));
+        $(By.cssSelector(createTradeButtonOnMainPage)).waitUntil(visible,20000).click(); //открываем форму
+
+        $(By.xpath(fzType223)).waitUntil(visible,20000).click(); //проставляем ФЗ
+
+        $(By.xpath(financeSourceBudget)).waitUntil(visible,20000).click(); //проставляем источник финансирования
+
+        $(By.cssSelector(tradeName)).waitUntil(visible,20000).sendKeys("Автотест ЗМО"); // Имя закупки
+
+        $(By.cssSelector(addPosition)).waitUntil(visible,20000).click(); //Вызываем модальное окно выбора позиции
+
+        $(By.cssSelector("span[data-bind='click: pageVM.addProduct, visible: !pageVM.IsProductEditMode()']")).waitUntil(visible,20000); //Ждём открытия модалки
+
+        $(By.cssSelector(positionName)).waitUntil(visible,20000).sendKeys("Автотест ЗМО. наименование позиции"); //Вводим наименование позиции лота
+
+        $(By.cssSelector(positionOKPD2)).waitUntil(visible,20000).sendKeys("10.51.52.121"); //Вбиваем ОКПД
+
+        $(By.cssSelector(positionOKEI)).waitUntil(visible,20000).sendKeys("Гектолитр чистого (100 %) спирта"); //Выбираем ОКЕИ
+           // $(By.cssSelector("li[id='ui-id-1129']")).waitUntil(visible,20000);  // Ждём выпадайку
+            $(By.cssSelector(positionOKEI)).sendKeys(Keys.DOWN); //Жмякаем "вниз" на клавиатуре
+            $(By.cssSelector(positionOKEI)).sendKeys(Keys.ENTER); //Жмякаем "Enter" на клавиатуре
+
+        $(By.cssSelector(positionQuantity)).waitUntil(visible,20000).sendKeys("10"); //Вбиваем кол-во
+
+        $(By.cssSelector(positionPrice)).waitUntil(visible,20000).sendKeys("8"); //Вбиваем цену
+
+        $(By.cssSelector(positionAddButton)).waitUntil(visible,20000).click(); //Нажимаем добавить
+
+        $(By.cssSelector("span[data-bind='click: pageVM.addProduct, visible: !pageVM.IsProductEditMode()']")).waitUntil(not(visible),20000); //Ждём закрытия модалки
+
+        $(By.cssSelector(autoFillContactInfo)).waitUntil(visible,20000).click(); //Вбиваем ФИО, ТЕЛЕФОН, регион
+
+        $(By.cssSelector(deliveryTerms)).waitUntil(visible,20000).sendKeys("Условия доставки"); //Вбиваем условия доставки
+
+        $(By.cssSelector(deliveryPlace)).waitUntil(visible,20000).sendKeys("Место доставки"); //Вбиваем условия доставки
+
+        $(By.cssSelector(paymentConditions)).waitUntil(visible,20000).sendKeys("Условия оплаты"); //Вбиваем условия оплаты
+
+        $(By.cssSelector(tradeEndDate)).waitUntil(visible,20000).sendKeys("27012020"); //Вбиваем дату окончания TODO
+
+        $(By.cssSelector(tradeDescription)).waitUntil(visible,20000).sendKeys("tradeDescription"); //Вбиваем дату окончания TODO
+
+        //executeJavaScript("document.querySelector(\"[name='OrganizationDocumentTypeHidden']\").setAttribute(\"type\",\"\");");
+        //$(By.cssSelector(tradeAddFile)).sendKeys("D:\\Market\\IpsumLorem.docx");
+        $(By.cssSelector("input[data-url='https://223-zmo-servicing-api.rts-tender.ru/api/Upload']")).sendKeys("D:\\Market\\IpsumLorem.docx");  //Подгружаем файл
+
+        $(By.xpath(XnameOfUploadFile)).waitUntil(visible,20000); //Ждём погрузки файла
+
+        $(By.cssSelector(publishTrade)).waitUntil(visible,20000).click(); //Нажимаем опубликовать
     }
 }
+

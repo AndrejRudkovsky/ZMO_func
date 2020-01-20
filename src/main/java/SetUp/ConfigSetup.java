@@ -21,6 +21,11 @@ public class ConfigSetup {
     protected String fzType44p5 = "//input[@name='FzTypeBtnGroup'][@value='20']";
     protected String fzType223 = "//input[@name='FzTypeBtnGroup'][@value='5']";
     protected String priceForEvenObject = "input[id='IsManualEnterPriceForEachProductCheckBox']";
+    protected String financeSourceBudget = "//input[@name='FinanceSourceTypeBtnGroup'][@value='5']";
+    protected String financeSourceNonBudget = "//input[@name='FinanceSourceTypeBtnGroup'][@value='10']";
+    protected String financeSource = "//input[@name='FinanceSourceTypeBtnGroup'][@value='1']";
+
+
     protected String tradeName = "textarea[id='TradeName']";
         //Create_trade_position -----------------------------------
     protected String addPosition = "div[data-bind='click: pageVM.showAddProductModal']";
@@ -39,14 +44,17 @@ public class ConfigSetup {
         // ---------------------------------------------------------
     protected String autoFillContactInfo = "button[data-bind='click: pageVM.FillContactData']";
     protected String contactInfo = "input[id='ContactInfo_Fio']";  //autoFillContactInfo
-    protected String phoneNumber = "input[id='ContactInfo_Fio']";  //autoFillContactInfo
+    protected String phoneNumber = "input[id='ContactInfo_ContactPhone']";  //autoFillContactInfo
     protected String customerRegion = "select[data-bind=\"options: pageVM.kladrRegions, optionsText: 'Name', optionsValue: 'Id', value: pageVM.KladrRegionCode\"]";  //autoFillContactInfo
+    protected String deliveryPlace = "textarea[id='DeliveryPlaceSuggestion']";
     protected String deliveryTerms = "textarea[id='DeliveryTerms']";
     protected String paymentConditions = "textarea[id='ConditionsOfPayment']";
     protected String tradeEndDate = "input[data-bind='value: pageVM.fillingAppEndDate']"; //можно вводить 6 чисел - текущая дата, полный формат DD.MM.YYYY HH.MM
     protected String dealEndDate = "input[data-bind='value: pageVM.planedDealSignDate']"; //выставляется автоматом
     protected String tradeDescription = "textarea[id='Description']";
-    protected String tradeAddFile = "input[name='OrganizationDocumentTypeHidden']";  //sendFile("D:/Market/IpsumLorem.docx")
+    protected String tradeAddFile = "input[name='OrganizationDocumentTypeHidden']";  //("D:\\Market\\IpsumLorem.docx")  JS=document.querySelector("[name='OrganizationDocumentTypeHidden']").setAttribute("type","");
+
+    protected String XnameOfUploadFile = "//a[contains(text(),'IpsumLorem.docx')][@class='link-red']";
 
     protected String publishTrade = "button[data-bind='click: pageVM.publish']";
 
